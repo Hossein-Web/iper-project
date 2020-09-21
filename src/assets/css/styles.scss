@@ -1,2 +1,60 @@
 @import 'variables';
 @import 'reset';
+
+.currency-list-wrapper{
+  display: flex;
+  &__item{
+    text-align: left;
+    color: $text-color;
+    .currency-name{
+      font-size: 12px;
+      font-weight: 500;
+      margin-top: 13px;
+      margin-bottom: 2px;
+    }
+    .currency-details{
+      direction: ltr;
+      .currency-value{
+        font-size: 14px;
+        font-weight: 400;
+        margin-right: 12px;
+      }
+      .currency-status{
+        font-size: 12px;
+        font-weight: 700;
+        &--inc, &--dec{
+          &::before{
+            display: inline-block;
+            position: relative;
+            width: 10px;
+            height: 10px;
+            margin-right: 5px;
+          }
+        }
+        &--inc{
+          color: #45b40d;
+          &::before{
+            content: '';
+            color: #45b40d;
+            background-color: #45b40d;
+          }
+        }
+        &--dec{
+          color: #ff4342;
+          &::before{
+            content: '';
+            color: #ff4342;
+            background-color: #ff4342;
+          }
+        }
+
+      }
+    }
+    &:not( :first-child ){
+      padding-right: 33px;
+    }
+    &:not( :last-child ){
+      padding-left: 33px;
+    }
+  }
+}
