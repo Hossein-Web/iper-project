@@ -18,3 +18,13 @@ $(window).on('load', () => {
 	}, 2000);
 	AOS.init();
 });
+
+// header bottom slider
+let latest_news_articles = new Swiper( '.latest-news-articles__slider> .swiper-container', {
+	direction: 'vertical',
+	autoplay: {
+		delay: 3000
+	},
+	effect: 'fade',
+	autoHeight: true
+} );

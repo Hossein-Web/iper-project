@@ -1,3 +1,4 @@
+@import '../../../node_modules/swiper/swiper-bundle';
 @import 'variables';
 @import 'reset';
 
@@ -5,8 +6,9 @@
 Table of content
 -Fonts
 -General
--Top header
+-Top live prices
 -Media queries
+-Header bottom
 */
 /*------------ Fonts -------------*/
 @font-face {
@@ -76,7 +78,7 @@ body{
 
 }
 
-/*------------ Top header -------------*/
+/*------------ Top live prices -------------*/
 .top-live-prices{
   .currency-list-wrapper{
     display: flex;
@@ -138,11 +140,51 @@ body{
     }
   }
 }
+
+/*------------ Header bottom-------------*/
+.header-bottom{
+  padding-top: 13px;
+  .latest-news-articles{
+    display: flex;
+    &__title{
+      color: $text-color-2;
+      flex: 0 0 auto;
+      font-size: 14px;
+      font-weight: 400;
+      margin-left: 11px;
+    }
+    &__slider{
+      .swiper-container{
+        max-height: 60px;
+        .swiper-slide{
+          color: $text-color-2;
+          font-size: 16px;
+          font-weight: 500;
+          background-color: white;
+        }
+      }
+    }
+  }
+  .secondary-menu{
+    display: flex;
+    justify-content: end;
+    &__item{
+      a{
+        color: $text-color;
+        font-size: 12px;
+        font-weight: 400;
+      }
+      &:not( :last-child ){
+        margin-left: 38px;
+      }
+    }
+  }
+}
 /*------------ Media queries -------------*/
 
 /*------------ <1200px -------------*/
 @media only screen and (max-width: 1200px) {
-  /*Top header*/
+  /*Top live prices*/
   .top-live-prices{
     .currency-list-wrapper{
       &__item{
@@ -156,7 +198,7 @@ body{
 
 /*------------ <992px -------------*/
 @media only screen and (max-width: 992px) {
-  /*Top header*/
+  /*Top live prices*/
   .top-live-prices{
     .currency-list-wrapper{
       &__item{
@@ -171,7 +213,7 @@ body{
 
 /*------------ <768px -------------*/
 @media only screen and (max-width: 992px) {
-  /*Top header*/
+  /*Top live prices*/
   .top-live-prices{
     .currency-list-wrapper{
       &__item{
@@ -188,6 +230,7 @@ body{
 
 /*------------ <576px -------------*/
 @media only screen and (max-width: 576px) {
+  /*Top live prices*/
   .top-live-prices{
     .currency-list-wrapper{
       justify-content: center;
@@ -199,5 +242,30 @@ body{
         }
       }
     }
+  }
+  /*Header bottom*/
+  .header-bottom{
+    .latest-news-articles{
+      flex-wrap: wrap;
+      &__title{
+        margin-bottom: 20px;
+      }
+      &__slider{
+        margin-bottom: 20px;
+        .swiper-container{
+          max-height: unset !important;
+        }
+      }
+    }
+    .secondary-menu{
+      display: none;
+    }
+  }
+}
+
+/*------------ <450px -------------*/
+@media only screen and (max-width: 450px) {
+  .header-bottom{
+    padding: 0 10px;
   }
 }
