@@ -9,6 +9,7 @@ Table of content
 -Top live prices
 -Media queries
 -Header bottom
+-Tile post
 */
 /*------------ Fonts -------------*/
 @font-face {
@@ -16,95 +17,107 @@ Table of content
   font-style: normal;
   font-weight: 900;
   src: url('../fonts/IRANSans/eot/IRANSansWeb_Black.eot');
-  src: url('../fonts/IRANSans/eot/IRANSansWeb_Black.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
-  url('../fonts/IRANSans/woff2/IRANSansWeb_Black.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
-  url('../fonts/IRANSans/woff/IRANSansWeb_Black.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+  src: url('../fonts/IRANSans/eot/IRANSansWeb_Black.eot?#iefix') format('embedded-opentype'), /* IE6-8 */
+  url('../fonts/IRANSans/woff2/IRANSansWeb_Black.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/
+  url('../fonts/IRANSans/woff/IRANSansWeb_Black.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
   url('../fonts/IRANSans/ttf/IRANSansWeb_Black.ttf') format('truetype');
 }
+
 @font-face {
   font-family: IRANSans;
   font-style: normal;
   font-weight: bold;
   src: url('../fonts/IRANSans/eot/IRANSansWeb_Bold.eot');
-  src: url('../fonts/IRANSans/eot/IRANSansWeb_Bold.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
-  url('../fonts/IRANSans/woff2/IRANSansWeb_Bold.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
-  url('../fonts/IRANSans/woff/IRANSansWeb_Bold.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+  src: url('../fonts/IRANSans/eot/IRANSansWeb_Bold.eot?#iefix') format('embedded-opentype'), /* IE6-8 */
+  url('../fonts/IRANSans/woff2/IRANSansWeb_Bold.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/
+  url('../fonts/IRANSans/woff/IRANSansWeb_Bold.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
   url('../fonts/IRANSans/ttf/IRANSansWeb_Bold.ttf') format('truetype');
 }
+
 @font-face {
   font-family: IRANSans;
   font-style: normal;
   font-weight: 500;
   src: url('../fonts/IRANSans/eot/IRANSansWeb_Medium.eot');
-  src: url('../fonts/IRANSans/eot/IRANSansWeb_Medium.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
-  url('../fonts/IRANSans/woff2/IRANSansWeb_Medium.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
-  url('../fonts/IRANSans/woff/IRANSansWeb_Medium.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+  src: url('../fonts/IRANSans/eot/IRANSansWeb_Medium.eot?#iefix') format('embedded-opentype'), /* IE6-8 */
+  url('../fonts/IRANSans/woff2/IRANSansWeb_Medium.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/
+  url('../fonts/IRANSans/woff/IRANSansWeb_Medium.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
   url('../fonts/IRANSans/ttf/IRANSansWeb_Medium.ttf') format('truetype');
 }
+
 @font-face {
   font-family: IRANSans;
   font-style: normal;
   font-weight: 300;
   src: url('../fonts/IRANSans/eot/IRANSansWeb_Light.eot');
-  src: url('../fonts/IRANSans/eot/IRANSansWeb_Light.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
-  url('../fonts/IRANSans/woff2/IRANSansWeb_Light.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
-  url('../fonts/IRANSans/woff/IRANSansWeb_Light.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+  src: url('../fonts/IRANSans/eot/IRANSansWeb_Light.eot?#iefix') format('embedded-opentype'), /* IE6-8 */
+  url('../fonts/IRANSans/woff2/IRANSansWeb_Light.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/
+  url('../fonts/IRANSans/woff/IRANSansWeb_Light.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
   url('../fonts/IRANSans/ttf/IRANSansWeb_Light.ttf') format('truetype');
 }
+
 @font-face {
   font-family: IRANSans;
   font-style: normal;
   font-weight: 200;
   src: url('../fonts/IRANSans/eot/IRANSansWeb_UltraLight.eot');
-  src: url('../fonts/IRANSans/eot/IRANSansWeb_UltraLight.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
-  url('../fonts/IRANSans/woff2/IRANSansWeb_UltraLight.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
-  url('../fonts/IRANSans/woff/IRANSansWeb_UltraLight.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+  src: url('../fonts/IRANSans/eot/IRANSansWeb_UltraLight.eot?#iefix') format('embedded-opentype'), /* IE6-8 */
+  url('../fonts/IRANSans/woff2/IRANSansWeb_UltraLight.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/
+  url('../fonts/IRANSans/woff/IRANSansWeb_UltraLight.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
   url('../fonts/IRANSans/ttf/IRANSansWeb_UltraLight.ttf') format('truetype');
 }
+
 @font-face {
   font-family: IRANSans;
   font-style: normal;
   font-weight: normal;
   src: url('../fonts/IRANSans/eot/IRANSansWeb.eot');
-  src: url('../fonts/IRANSans/eot/IRANSansWeb.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
-  url('../fonts/IRANSans/woff2/IRANSansWeb.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
-  url('../fonts/IRANSans/woff/IRANSansWeb.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+  src: url('../fonts/IRANSans/eot/IRANSansWeb.eot?#iefix') format('embedded-opentype'), /* IE6-8 */
+  url('../fonts/IRANSans/woff2/IRANSansWeb.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/
+  url('../fonts/IRANSans/woff/IRANSansWeb.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
   url('../fonts/IRANSans/ttf/IRANSansWeb.ttf') format('truetype');
 }
+
 /*------------ General -------------*/
-body{
+body {
   font-family: IRANSans, sans-serif;
   text-align: right;
 
 }
 
 /*------------ Top live prices -------------*/
-.top-live-prices{
-  .currency-list-wrapper{
+.top-live-prices {
+  .currency-list-wrapper {
     display: flex;
     flex-wrap: wrap;
-    &__item{
+
+    &__item {
       text-align: left;
       color: $text-color;
       flex: 1 0 auto;
-      .currency-name{
+
+      .currency-name {
         font-size: 12px;
         font-weight: 500;
         margin-top: 13px;
         margin-bottom: 2px;
       }
-      .currency-details{
+
+      .currency-details {
         direction: ltr;
-        .currency-value{
+
+        .currency-value {
           font-size: 14px;
           font-weight: 400;
           margin-right: 12px;
         }
-        .currency-status{
+
+        .currency-status {
           font-size: 12px;
           font-weight: 700;
-          &--inc, &--dec{
-            &::before{
+
+          &--inc, &--dec {
+            &::before {
               display: inline-block;
               position: relative;
               width: 10px;
@@ -112,17 +125,21 @@ body{
               margin-right: 5px;
             }
           }
-          &--inc{
+
+          &--inc {
             color: #45b40d;
-            &::before{
+
+            &::before {
               content: '';
               color: #45b40d;
               background-color: #45b40d;
             }
           }
-          &--dec{
+
+          &--dec {
             color: #ff4342;
-            &::before{
+
+            &::before {
               content: '';
               color: #ff4342;
               background-color: #ff4342;
@@ -131,10 +148,12 @@ body{
 
         }
       }
-      &:not( :first-child ){
+
+      &:not( :first-child ) {
         padding-right: 33px;
       }
-      &:not( :last-child ){
+
+      &:not( :last-child ) {
         padding-left: 33px;
       }
     }
@@ -142,21 +161,25 @@ body{
 }
 
 /*------------ Header bottom-------------*/
-.header-bottom{
+.header-bottom {
   padding-top: 13px;
-  .latest-news-articles{
+
+  .latest-news-articles {
     display: flex;
-    &__title{
+
+    &__title {
       color: $text-color-2;
       flex: 0 0 auto;
       font-size: 14px;
       font-weight: 400;
       margin-left: 11px;
     }
-    &__slider{
-      .swiper-container{
+
+    &__slider {
+      .swiper-container {
         max-height: 60px;
-        .swiper-slide{
+
+        .swiper-slide {
           color: $text-color-2;
           font-size: 16px;
           font-weight: 500;
@@ -165,30 +188,130 @@ body{
       }
     }
   }
-  .secondary-menu{
+
+  .secondary-menu {
     display: flex;
     justify-content: end;
-    &__item{
-      a{
+
+    &__item {
+      a {
         color: $text-color;
         font-size: 12px;
         font-weight: 400;
       }
-      &:not( :last-child ){
+
+      &:not( :last-child ) {
         margin-left: 38px;
       }
     }
   }
 }
+
+/*------------ Tile post -------------*/
+.tile-post-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  .tile-post {
+    &--small {
+      margin-left: 19px;
+      height: 191px !important;
+    }
+
+    &__item {
+      height: 399px;
+      position: relative;
+      flex: 1 0 auto;
+      &:not( :last-child ) {
+        margin-bottom: 18px;
+      }
+
+      .post-item-image {
+        height: 100%;
+        border-radius: 20px;
+      }
+
+      .post-item-categories {
+        display: flex;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+
+        .post-item-category {
+          border-radius: 5px;
+          background-color: #0661f8;
+
+          &:not( :last-child ) {
+            margin-left: 5px;
+          }
+
+          a {
+            color: white;
+            font-size: 12px;
+            font-weight: 700;
+            display: block;
+            padding: 1px 5px;
+          }
+
+        }
+      }
+
+      .post-item-details {
+        position: absolute;
+        bottom: 24px;
+        right: 23px;
+        color: white;
+        left: 0;
+
+        &__title {
+          font-size: 17px;
+          font-weight: 700;
+          margin-bottom: 17px;
+          display: inline-block;
+        }
+
+        &__links {
+          display: flex;
+
+          li {
+            font-size: 12px;
+            font-weight: 500;
+
+            &:not( :last-child ) {
+              margin-left: 21px;
+            }
+          }
+        }
+      }
+      .post-item-like {
+        &::before {
+          display: inline-block;
+          content: '';
+          position: absolute;
+          left: 24px;
+          bottom: 24px;
+          width: 20px;
+          height: 20px;
+          background-color: white;
+        }
+      }
+    }
+  }
+}
+
 /*------------ Media queries -------------*/
 
 /*------------ <1200px -------------*/
 @media only screen and (max-width: 1200px) {
   /*Top live prices*/
-  .top-live-prices{
-    .currency-list-wrapper{
-      &__item{
-        &:last-child{
+  .top-live-prices {
+    .currency-list-wrapper {
+      &__item {
+        &:last-child {
           padding-left: 33px;
         }
       }
@@ -199,12 +322,34 @@ body{
 /*------------ <992px -------------*/
 @media only screen and (max-width: 992px) {
   /*Top live prices*/
-  .top-live-prices{
-    .currency-list-wrapper{
-      &__item{
-        &:last-child{
+  .top-live-prices {
+    .currency-list-wrapper {
+      &__item {
+        &:last-child {
           flex: 0 0 auto;
           padding-right: 45px;
+        }
+      }
+    }
+  }
+
+  /*Header bottom*/
+  .header-bottom {
+    .secondary-menu {
+      display: none;
+    }
+  }
+
+  /*Tile post*/
+  .tile-post {
+    .tile-post-wrapper {
+      .tile-post {
+        &__item {
+          margin-bottom: 19px;
+        }
+
+        &--small {
+          margin-left: 0;
         }
       }
     }
@@ -212,15 +357,16 @@ body{
 }
 
 /*------------ <768px -------------*/
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 768px) {
   /*Top live prices*/
-  .top-live-prices{
-    .currency-list-wrapper{
-      &__item{
-        &:first-child{
+  .top-live-prices {
+    .currency-list-wrapper {
+      &__item {
+        &:first-child {
           padding-right: 33px;
         }
-        &:last-child{
+
+        &:last-child {
           flex: 1 0 auto;
         }
       }
@@ -231,41 +377,56 @@ body{
 /*------------ <576px -------------*/
 @media only screen and (max-width: 576px) {
   /*Top live prices*/
-  .top-live-prices{
-    .currency-list-wrapper{
+  .top-live-prices {
+    .currency-list-wrapper {
       justify-content: center;
-      &__item{
+
+      &__item {
         flex: 0 0 auto !important;
         padding: 0 33px !important;
-        &:last-child{
+
+        &:last-child {
           flex: 0 0 auto;
         }
       }
     }
   }
+
   /*Header bottom*/
-  .header-bottom{
-    .latest-news-articles{
+  .header-bottom {
+    .latest-news-articles {
       flex-wrap: wrap;
-      &__title{
+
+      &__title {
         margin-bottom: 20px;
       }
-      &__slider{
+
+      &__slider {
         margin-bottom: 20px;
-        .swiper-container{
+
+        .swiper-container {
           max-height: unset !important;
         }
       }
     }
-    .secondary-menu{
-      display: none;
+  }
+
+  /*Tile post*/
+  .tile-post{
+    &__item{
+      .post-item-like{
+        &::before{
+          top: 20px;
+          bottom: unset;
+        }
+      }
     }
   }
 }
 
 /*------------ <450px -------------*/
 @media only screen and (max-width: 450px) {
-  .header-bottom{
+  .header-bottom, .tile-post {
     padding: 0 10px;
   }
 }
