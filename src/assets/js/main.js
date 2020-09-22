@@ -17,4 +17,17 @@ $(window).on('load', () => {
 		});
 	}, 2000);
 	AOS.init();
+	//mobile menu
+	$('.header__mobile-menu-button').on( 'click', function () {
+		$('.header__mobile-menu-wrapper').addClass( 'mobile-menu-open' );
+	} )
 });
+$('.mobile-button').on( 'click', function () {
+	if ( $('.header__mobile-menu-wrapper').hasClass( 'mobile-menu-open' ) ){
+		$('.header__mobile-menu-wrapper').removeClass( 'mobile-menu-open' );
+	}
+} );
+
+$( '.search>span' ).on( 'click', function () {
+	$( '.search__form' ).toggleClass( 'search-open' );
+} );
