@@ -7,10 +7,13 @@ Table of content
 -Fonts
 -General
 -Top live prices
--Media queries
+-Header
 -Header bottom
 -Tile post
+-Ads
+-Media queries
 */
+
 /*------------ Fonts -------------*/
 @font-face {
   font-family: IRANSans;
@@ -82,7 +85,13 @@ Table of content
 body {
   font-family: IRANSans, sans-serif;
   text-align: right;
+}
 
+i {
+  background-color: black;
+  width: 15px;
+  height: 15px;
+  display: inline-block;
 }
 
 /*------------ Top live prices -------------*/
@@ -155,6 +164,169 @@ body {
 
       &:not( :last-child ) {
         padding-left: 33px;
+      }
+    }
+  }
+}
+
+/*------------ Header -------------*/
+.header {
+  background-color: white;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  box-shadow: 0 -50px 45px -30px rgba(0, 0, 0, 0.11), 0 50px 45px -30px rgba(0, 0, 0, 0.11);
+
+  &__main-menu {
+    font-size: 14px;
+    font-weight: 700;
+    color: $text-color;
+    padding-right: 30px;
+    li {
+      padding-left: 35px;
+
+      &:last-child {
+        padding-left: 0;
+      }
+    }
+  }
+
+  &__mobile-menu-button {
+    display: none;
+    background-color: black;
+    width: 20px;
+    height: 20px;
+    &:hover{
+      cursor: pointer;
+    }
+  }
+  &__user-links {
+    li {
+      padding-left: 23px;
+
+      &:last-child {
+        padding-left: 0;
+      }
+    }
+
+    .search {
+      span{
+        cursor: pointer;
+      }
+      &__form{
+        position: absolute;
+        right: 0;
+        margin-top: 20px;
+        width: 100%;
+        input{
+          padding: 10px 10px;
+          border-radius: 5px;
+          background-color: white;
+          border: 1px solid rgba( 0, 0, 0, 0.1 );
+          width: 0;
+          opacity: 0;
+          transition: 0.3s;
+        }
+        &.search-open{
+          input{
+            width: 100%;
+            opacity: 1;
+          }
+        }
+      }
+    }
+    .notification{
+      position: relative;
+        &:hover{
+          .notification__notification-list{
+            visibility: visible;
+            opacity: 1;
+            transform: rotatex( 0deg );
+          }
+        }
+      &__notification-list{
+        width: 250px;
+        background-color: white;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        position: absolute;
+        top: 180%;
+        right: 0;
+        visibility: hidden;
+        opacity: 0;
+        transition: 0.3s;
+        padding: 10px;
+        transform: rotatex( -90deg );
+        box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.1);
+        ul{
+          li{
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            &:last-child{
+              border-bottom: none;
+            }
+          }
+        }
+      }
+      &__is-active{
+        position: absolute;
+        right: -6px;
+        top: -4px;
+        background-color: #0661f8;
+        border-radius: 6px;
+        width: 6px;
+        height: 6px;
+      }
+    }
+    .where-button {
+      a {
+        font-size: 14px;
+        font-weight: 500;
+        border-radius: 25px;
+        background-color: #0661f8;
+        padding: 18px 30px;
+        color: white;
+        display: inline-block;
+      }
+    }
+  }
+
+  &__mobile-menu-wrapper {
+    opacity: 0;
+    position: fixed;
+    right: -250px;
+    top: 0;
+    bottom: 0;
+    width: 250px;
+    height: 100vh;
+    background-color: #e8e2e2;
+    transition: all 0.5s;
+    &.mobile-menu-open {
+      opacity: 1;
+      right: 0;
+    }
+
+    .mobile-button {
+      background-color: white;
+      width: 30px;
+      height: 30px;
+      margin-top: 5px;
+      margin-right: 5px;
+      &:hover{
+        cursor: pointer;
+      }
+    }
+
+    .mobile-logo {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .mobile-menu {
+      padding-right: 20px;
+
+      li {
+        margin-bottom: 20px;
       }
     }
   }
@@ -303,10 +475,15 @@ body {
   }
 }
 
+/*------------ Ads -------------*/
+.ads{
+  margin-bottom: 38px;
+}
+
 /*------------ Media queries -------------*/
 
-/*------------ <1200px -------------*/
-@media only screen and (max-width: 1200px) {
+/*------------ < 1200px -------------*/
+@media screen and (max-width: 1200px) {
   /*Top live prices*/
   .top-live-prices {
     .currency-list-wrapper {
@@ -317,10 +494,20 @@ body {
       }
     }
   }
+  /*header*/
+  .header {
+    &__logo {
+      margin-left: 0;
+      text-align: center;
+    }
+    &__main-menu {
+      padding-right: 0;
+    }
+  }
 }
 
-/*------------ <992px -------------*/
-@media only screen and (max-width: 992px) {
+/*------------ < 992px -------------*/
+@media screen and (max-width: 992px) {
   /*Top live prices*/
   .top-live-prices {
     .currency-list-wrapper {
@@ -330,6 +517,22 @@ body {
           padding-right: 45px;
         }
       }
+    }
+  }
+
+  /*header*/
+  .header {
+    &__logo {
+      margin-left: 0;
+      text-align: center;
+    }
+
+    &__main-menu {
+      display: none;
+    }
+
+    &__mobile-menu-button {
+      display: block;
     }
   }
 
@@ -374,8 +577,8 @@ body {
   }
 }
 
-/*------------ <576px -------------*/
-@media only screen and (max-width: 576px) {
+/*------------ < 576px -------------*/
+@media screen and (max-width: 576px) {
   /*Top live prices*/
   .top-live-prices {
     .currency-list-wrapper {
@@ -386,6 +589,27 @@ body {
         padding: 0 33px !important;
 
         &:last-child {
+          flex: 0 0 auto;
+        }
+      }
+    }
+  }
+
+  /*header*/
+  .header {
+    &__logo {
+      margin-bottom: 40px;
+    }
+
+    &__user-links {
+      ul {
+        flex-wrap: wrap;
+        justify-content: center !important;
+
+        .notification {
+          padding-left: 0;
+        }
+        .where-button {
           flex: 0 0 auto;
         }
       }
@@ -423,7 +647,6 @@ body {
     }
   }
 }
-
 /*------------ <450px -------------*/
 @media only screen and (max-width: 450px) {
   .header-bottom, .tile-post {
