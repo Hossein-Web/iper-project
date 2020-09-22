@@ -1,3 +1,4 @@
+@import '../../../node_modules/swiper/swiper-bundle';
 @import 'variables';
 @import 'reset';
 
@@ -5,8 +6,9 @@
 Table of content
 -Fonts
 -General
--
+-Top live prices
 -Header
+-Header bottom
 -Media queries
 */
 /*------------ Fonts -------------*/
@@ -77,8 +79,8 @@ Table of content
 }
 
 /*------------ General -------------*/
-body {
-  font-family: IRANSans;
+body{
+  font-family: IRANSans, sans-serif;
   text-align: right;
 }
 
@@ -87,6 +89,69 @@ i {
   width: 15px;
   height: 15px;
   display: inline-block;
+}
+
+/*------------ Top live prices -------------*/
+.top-live-prices{
+  .currency-list-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    &__item{
+      text-align: left;
+      color: $text-color;
+      flex: 1 0 auto;
+      .currency-name{
+        font-size: 12px;
+        font-weight: 500;
+        margin-top: 13px;
+        margin-bottom: 2px;
+      }
+      .currency-details{
+        direction: ltr;
+        .currency-value{
+          font-size: 14px;
+          font-weight: 400;
+          margin-right: 12px;
+        }
+        .currency-status{
+          font-size: 12px;
+          font-weight: 700;
+          &--inc, &--dec{
+            &::before{
+              display: inline-block;
+              position: relative;
+              width: 10px;
+              height: 10px;
+              margin-right: 5px;
+            }
+          }
+          &--inc{
+            color: #45b40d;
+            &::before{
+              content: '';
+              color: #45b40d;
+              background-color: #45b40d;
+            }
+          }
+          &--dec{
+            color: #ff4342;
+            &::before{
+              content: '';
+              color: #ff4342;
+              background-color: #ff4342;
+            }
+          }
+
+        }
+      }
+      &:not( :first-child ){
+        padding-right: 33px;
+      }
+      &:not( :last-child ){
+        padding-left: 33px;
+      }
+    }
+  }
 }
 
 /*------------ Header -------------*/
@@ -252,9 +317,60 @@ i {
   }
 }
 
+/*------------ Header bottom-------------*/
+.header-bottom{
+  padding-top: 13px;
+  .latest-news-articles{
+    display: flex;
+    &__title{
+      color: $text-color-2;
+      flex: 0 0 auto;
+      font-size: 14px;
+      font-weight: 400;
+      margin-left: 11px;
+    }
+    &__slider{
+      .swiper-container{
+        max-height: 60px;
+        .swiper-slide{
+          color: $text-color-2;
+          font-size: 16px;
+          font-weight: 500;
+          background-color: white;
+        }
+      }
+    }
+  }
+  .secondary-menu{
+    display: flex;
+    justify-content: end;
+    &__item{
+      a{
+        color: $text-color;
+        font-size: 12px;
+        font-weight: 400;
+      }
+      &:not( :last-child ){
+        margin-left: 38px;
+      }
+    }
+  }
+}
+
 /*------------ Media queries -------------*/
+
 /*------------ < 1200px -------------*/
 @media screen and (max-width: 1200px) {
+  /*Top live prices*/
+  .top-live-prices{
+    .currency-list-wrapper{
+      &__item{
+        &:last-child{
+          padding-left: 33px;
+        }
+      }
+    }
+  }
   /*header*/
   .header {
     &__logo {
@@ -266,8 +382,20 @@ i {
     }
   }
 }
+
 /*------------ < 992px -------------*/
 @media screen and (max-width: 992px) {
+  /*Top live prices*/
+  .top-live-prices{
+    .currency-list-wrapper{
+      &__item{
+        &:last-child{
+          flex: 0 0 auto;
+          padding-right: 45px;
+        }
+      }
+    }
+  }
   /*header*/
   .header {
     &__logo {
@@ -285,8 +413,41 @@ i {
   }
 }
 
+/*------------ <768px -------------*/
+@media only screen and (max-width: 768px) {
+  /*Top live prices*/
+  .top-live-prices{
+    .currency-list-wrapper{
+      &__item{
+        &:first-child{
+          padding-right: 33px;
+        }
+        &:last-child{
+          flex: 1 0 auto;
+        }
+      }
+    }
+  }
+}
+
 /*------------ < 576px -------------*/
 @media screen and (max-width: 576px) {
+  /*Top live prices*/
+  .top-live-prices {
+    .currency-list-wrapper {
+      justify-content: center;
+
+      &__item {
+        flex: 0 0 auto !important;
+        padding: 0 33px !important;
+
+        &:last-child {
+          flex: 0 0 auto;
+        }
+      }
+    }
+  }
+
   /*header*/
   .header {
     &__logo {
@@ -307,5 +468,34 @@ i {
         }
       }
     }
+  }
+
+  /*Header bottom*/
+  .header-bottom {
+    .latest-news-articles {
+      flex-wrap: wrap;
+
+      &__title {
+        margin-bottom: 20px;
+      }
+
+      &__slider {
+        margin-bottom: 20px;
+
+        .swiper-container {
+          max-height: unset !important;
+        }
+      }
+    }
+
+    .secondary-menu {
+      display: none;
+    }
+  }
+}
+/*------------ <450px -------------*/
+@media only screen and (max-width: 450px) {
+  .header-bottom{
+    padding: 0 10px;
   }
 }
