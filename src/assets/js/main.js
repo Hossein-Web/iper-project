@@ -18,7 +18,7 @@ $(window).on('load', () => {
 	}, 2000);
 	AOS.init();
 	//mobile menu
-	$('.header__mobile-menu-button').on( 'click', function () {
+	$('.mobile-menu-button').on( 'click', function () {
 		$('.header__mobile-menu-wrapper').addClass( 'mobile-menu-open' );
 	} )
 });
