@@ -26,16 +26,26 @@ $('.mobile-button').on('click', function () {
 	if ($('.header__mobile-menu-wrapper').hasClass('mobile-menu-open')) {
 		$('.header__mobile-menu-wrapper').removeClass('mobile-menu-open');
 	}
-});
-	$('.search>span').on('click', function () {
-		$('.search__form').toggleClass('search-open');
-	});
-// header bottom slider
-	let latest_news_articles = new Swiper('.latest-news-articles__slider> .swiper-container', {
-		direction: 'vertical',
-		autoplay: {
-			delay: 3000
-		},
-		effect: 'fade',
-		autoHeight: true
-	});
+} );
+
+$( '.search>span' ).on( 'click', function () {
+	$( '.search__form' ).toggleClass( 'search-open' );
+} );
+
+// Header bottom slider
+let latest_news_articles = new Swiper( '.latest-news-articles__slider> .swiper-container', {
+	direction: 'vertical',
+	autoplay: {
+		delay: 3000
+	},
+	effect: 'fade',
+	autoHeight: true
+} );
+
+// Post-slider slider
+let post_slider_slider = new Swiper( '.post-slider__slider> .swiper-container', {
+	navigation: {
+		nextEl: '.post-slide-button--next',
+		prevEl: '.post-slide-button--prev',
+	},
+} );
