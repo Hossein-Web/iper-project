@@ -108,6 +108,18 @@ i {
   height: 15px;
   display: inline-block;
 }
+.p30{
+  margin: 0 -15px;
+  [class*=col]{
+    padding: 0 15px;
+  }
+}
+.p60{
+  margin: 0 -30px;
+  [class*=col]{
+    padding: 0 30px;
+  }
+}
 /*------------ Top live prices -------------*/
 .top-live-prices {
   .currency-list-wrapper {
