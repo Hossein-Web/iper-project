@@ -959,7 +959,38 @@ i {
 
 }
 
-
+.post{
+  box-shadow: -18px 18px 35px rgba(56, 66, 77, 0.05);
+  border-radius: 10px;
+  background-color: white;
+  &__content{
+    padding: 19px 20px 20px;
+    .post-title{
+      padding-bottom: 17px;
+      border-bottom: 2px solid #f7f8fa;
+      p{
+        font-size: 16px;
+        font-weight: 700;
+        color: $text-color-2;
+      }
+    }
+    .post-meta{
+      padding-top: 15px;
+      li{
+        span:first-child{
+          padding-top: 6px;
+          padding-left: 6px;
+        }
+      }
+      li:not( :last-child ){
+        padding-left: 28px;
+        color: $text-color-2;
+        font-size: 14px;
+        font-weight: 500;
+      }
+    }
+  }
+}
 /*------------ Media queries -------------*/
 
 /*------------ < 1200px -------------*/
