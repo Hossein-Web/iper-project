@@ -85,6 +85,18 @@ Table of content
 }
 
 /*------------ General -------------*/
+.p30{
+  margin: 0 -15px;
+  [class*=col]{
+    padding: 0 15px;
+  }
+}
+.p60{
+  margin: 0 -30px;
+  [class*=col]{
+    padding: 0 30px;
+  }
+}
 body {
   font-family: IRANSans, sans-serif;
   text-align: right;
@@ -507,8 +519,6 @@ i {
   &__title {
     margin-bottom: 20px;
     position: relative;
-    margin-left: 15px;
-    margin-right: 15px;
     &::after {
       content: '';
       position: absolute;
