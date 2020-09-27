@@ -1088,13 +1088,13 @@ i {
     .post-meta{
       padding-top: 15px;
       li{
-        span:first-child{
+        >span:first-child{
           padding-top: 6px;
           padding-left: 6px;
         }
       }
       li:not( :last-child ){
-        padding-left: 28px;
+        padding-left: 22px;
         color: $text-color-2;
         font-size: 14px;
         font-weight: 500;
