@@ -16,6 +16,8 @@ Table of content
 -Post
 -
 -offer posts
+-Post slider
+-Side tab
 -Media queries
 */
 
@@ -728,6 +730,7 @@ i {
     }
   }
 }
+
 /*------------ Live prices -------------*/
 .live-prices{
   margin-bottom: 40px;
@@ -745,7 +748,7 @@ i {
 
 /*------------ Post slider -------------*/
 .post-slider{
-  margin-bottom: 500px;
+  margin-bottom: 28px;
   .bourse-title{
     position: relative;
     display: flex;
@@ -888,6 +891,83 @@ i {
     }
   }
 }
+
+/*------------ Side tab -------------*/
+.side-tab{
+  &__tab_links{
+    display: flex;
+    justify-content: start;
+    a{
+      color: #3c3c3c;
+      font-size: 14px;
+      font-weight: 500;
+      padding-inline: 0;
+      background-color: transparent;
+      padding-bottom: 20px;
+      margin: 0 21px;
+      &.active{
+        color: $accent-color;
+        border-bottom: 2px solid $accent-color;
+      }
+    }
+  }
+  &__tab_content{
+    display: none;
+    &.active{
+      display: block;
+    }
+    padding: 0 23px;
+    ul{
+      display: flex;
+      flex-direction: column;
+      li{
+        padding-top: 29px;
+        &:not( :first-child ){
+          border-top: 1px solid #ebebeb;
+        }
+        a{
+          &:hover{
+            h6{
+              color: $accent-color;
+              &::before{
+                background-color: $accent-color;
+              }
+            }
+          }
+          h6{
+            position: relative;
+            color: $text-color-2;
+            font-size: 14px;
+            font-weight: 700;
+            padding-right: 10px;
+            transition: 0.3s;
+            &::before{
+              transition: 0.3s;
+              content: '';
+              display: block;
+              position: absolute;
+              width: 5px;
+              height: 9PX;
+              background-color: black;
+              right: 0;
+              top: 3px;
+            }
+          }
+        }
+        p{
+          padding: 14px 0;
+          color: #7a7a7a;
+          font-size: 12px;
+          font-weight: 400;
+          line-height: 30px;
+          text-align: justify;
+        }
+      }
+    }
+  }
+
+}
+
 .post{
   box-shadow: -18px 18px 35px rgba(56, 66, 77, 0.05);
   border-radius: 10px;
