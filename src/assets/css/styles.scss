@@ -13,7 +13,9 @@ Table of content
 -Ads
 -last post
 -Live prices
--Post slider
+-Post
+-
+-offer posts
 -Media queries
 */
 
@@ -85,6 +87,12 @@ Table of content
 }
 
 /*------------ General -------------*/
+.p20{
+  margin: 0 -10px;
+  [class*=col]{
+    padding: 0 10px;
+  }
+}
 .p30{
   margin: 0 -15px;
   [class*=col]{
@@ -912,6 +920,91 @@ i {
     }
   }
 }
+
+/*------------ offer posts -------------*/
+.offer-posts{
+  margin-bottom: 35px;
+  .container{
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+  &__title--blue{
+    span{
+      color: #0661f8;
+    }
+  }
+  &__title{
+    margin-bottom: 18px;
+    h4{
+      font-size: 18px;
+      font-weight: 700;
+      color: $text-color-2;
+    }
+    .view-more{
+      font-size: 14px;
+      font-weight: 500;
+      &__icon{
+        padding-top: 6px;
+        padding-right: 6PX;
+      }
+    }
+  }
+  &__item{
+    position: relative;
+    border-radius: 5px;
+    background-color: #f7f8fa;
+    transition: 0.3s;
+    .item-image{
+      cursor: pointer;
+      &::before{
+        opacity: 0;
+        transition: 0.3s;
+        position: absolute;
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient( 0deg, rgba(0,0,0,0.8) 75%, rgba(2,2,2,0.7) 100% );
+      }
+    }
+    &:hover{
+      .item-image{
+        &::before{
+          opacity: 0.8;
+        }
+      }
+      .item-excerpt{
+        opacity: 0.5;
+        height: 100px;
+      }
+    }
+  }
+  .item-content{
+    position: absolute;
+    bottom: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 12px;
+  }
+  .item-title{
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+    padding-bottom: 6px;
+  }
+  .item-excerpt{
+    transition: 0.3s;
+    opacity: 0.3;
+    color: white;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 30px;
+    height: 0;
+    overflow: hidden;
+  }
+}
+
+
 /*------------ Media queries -------------*/
 
 /*------------ < 1200px -------------*/
