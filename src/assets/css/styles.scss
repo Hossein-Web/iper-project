@@ -18,6 +18,7 @@ Table of content
 -offer posts
 -Post slider
 -Side tab
+-Side populars
 -Media queries
 */
 
@@ -112,23 +113,40 @@ body {
   text-align: right;
 }
 
+.title{
+  h5,h6{
+    color: $text-color-2;
+    font-size: 18px;
+    span{
+      color: $text-color-2;
+      font-size: 18px;
+    }
+  }
+  &--blue{
+    h5, h6{
+      span{
+        color: $accent-color;
+      }
+    }
+  }
+  &--small{
+    h6{
+      color: $text-color-2;
+      font-size: 14px;
+      font-weight: 500;
+      span{
+        font-size: 14px;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
 i {
   background-color: black;
   width: 15px;
   height: 15px;
   display: inline-block;
-}
-.p30{
-  margin: 0 -15px;
-  [class*=col]{
-    padding: 0 15px;
-  }
-}
-.p60{
-  margin: 0 -30px;
-  [class*=col]{
-    padding: 0 30px;
-  }
 }
 /*------------ Top live prices -------------*/
 .top-live-prices {
@@ -969,6 +987,87 @@ i {
     }
   }
 
+}
+
+/*------------ Side populars -------------*/
+.side-populars{
+  box-shadow: -18px 18px 35px rgba(56, 66, 77, 0.05);
+  background-color: white;
+  border-radius: 5px;
+  padding-top: 15px;
+  margin-bottom: 38px;
+  .title{
+    margin-bottom: 33px;
+    padding: 0 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    a{
+      border-radius: 14px;
+      background-color: #f7f8fa;
+      color: $text-color-2;
+      font-size: 12px;
+      font-weight: 300;
+      padding: 7px 25px;
+    }
+  }
+  &__items-wrapper{
+    li{
+      display: flex;
+      padding-right: 24px;
+      position: relative;
+      &:not( :last-child ){
+        box-shadow: 0 55px 29px -35px rgba(0,0,0,0.45);
+        margin-bottom: 23px;
+      }
+      .img-wrapper{
+        margin-left: 12px;
+        img{
+          border-radius: 20px;
+          width: 53px;
+        }
+      }
+      .post-details{
+        padding-bottom: 25px;
+        flex: 1 0 auto;
+        a{
+          &:hover{
+            h6{
+              color: $accent-color;
+              &::after{
+                color: $accent-color;
+                background-color: $accent-color;
+              }
+            }
+          }
+          h6{
+            transition: 0.3s;
+            color: $text-color-2;
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 7px;
+            position: relative;
+            &::after{
+              transition: 0.3s;
+              content: '';
+              display: block;
+              position: absolute;
+              left: 40px;
+              top: 0;
+              width: 21px;
+              height: 21px;
+              background-color: transparent;
+            }
+          }
+        }
+        p{
+          color: #7a7a7a;
+          font-size: 14px;
+          font-weight: 400;
+        }
+      }
+    }
+  }
 }
 
 .post{
