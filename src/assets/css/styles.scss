@@ -904,6 +904,8 @@ i {
   }
   &__tab_content{
     display: none;
+    box-shadow: -18px 18px 35px rgba(56, 66, 77, 0.05);
+    border-radius: 5px;
     &.active{
       display: block;
     }
