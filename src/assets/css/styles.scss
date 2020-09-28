@@ -1,6 +1,7 @@
 @import '../../../node_modules/swiper/swiper-bundle';
 @import 'variables';
 @import 'reset';
+@import '../../../node_modules/simplebar/dist/simplebar.min';
 
 /*
 Table of content
@@ -1013,7 +1014,7 @@ i {
   }
   &__title--blue{
     span{
-      color: #0661f8;
+      color: $accent-color;
     }
   }
   &__title{
@@ -1087,7 +1088,87 @@ i {
   }
 }
 
+.comments-and-posts{
+  .simplebar-scrollbar::before {
+    background-color: #0661f8;
+    opacity: 1;
+    border-radius: 0;
+    width: 4px;
+  }
+  .simplebar-track{
+    background-color: #ebebeb;
+    width: 4px;
+  }
+  .comments{
+    &__title{
+      margin-bottom: 38px;
+    }
+    &__wrapper{
+      direction: ltr;
+      padding-left: 25px;
+      padding-right: 25px;
+      height: 350px;
+      ul{
+        direction: rtl;
+      }
+      li{
+        position: relative;
+        &:not( :last-child ){
+          border-bottom: 2px solid #ebebeb;
+        }
+        &:first-child{
+          .comment-content{
+            padding-top: 0;
+          }
+        }
+        &:hover{
+          .view-more{
+            height: 100%;
+            visibility: visible;
+          }
+        }
+      }
+      .comment-profile-image{
+        width: 54px;
+        border-radius: 50%;
+      }
+      .comment-content{
+        padding-right: 11px;
+        padding-top: 20px;
+        color: #38424c;
+        p:first-child{
+          padding-bottom: 11px;
+          font-size: 16px;
+          font-weight: 700;
+        }
+        p:nth-child(2){
+          padding-bottom: 22px;
+          font-size: 14px;
+          font-weight: 500;
 
+        }
+        .view-more{
+          position: absolute;
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          height: 0;
+          transition: 0.3s;
+          font-size: 16px;
+          display: flex;
+          align-items: center;
+          font-weight: 500;
+          color: $accent-color;
+          background-color: white;
+          padding-right: 27px;
+          padding-left: 15px;
+          visibility: hidden;
+          box-shadow: 11px 0 7px -7px rgba(0, 0, 0, .1);
+        }
+      }
+    }
+  }
+}
 /*------------ Media queries -------------*/
 
 /*------------ < 1200px -------------*/

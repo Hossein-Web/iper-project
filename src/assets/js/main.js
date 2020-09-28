@@ -59,3 +59,13 @@ $( '.side-tab__tab_links a' ).on( 'click', function (e) {
 		$(tab_id).fadeIn();
 		$(this).addClass("active");
 });
+
+
+//comments section scroll
+new SimpleBar( $('.comments__wrapper')[0], {
+	classNames: {
+		// defaults
+		scrollbar: 'simplebar-scrollbar',
+		track: 'simplebar-track'
+	}
+});
