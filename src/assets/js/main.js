@@ -77,3 +77,15 @@ var mySwiper = new Swiper('.slider-post-small-slider .swiper-container', {
 		prevEl: '.slider-small-button--prev',
 	},
 });
+
+//services slider
+var services =  new Swiper( '.services-slider__wrapper .swiper-container', {
+	speed: 400,
+	spaceBetween: 30,
+	slidesPerView: 4,
+	pagination: {
+		el: '.swiper-pagination',
+		type: 'bullets',
+		clickable: true
+	},
+});
