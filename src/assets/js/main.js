@@ -69,3 +69,11 @@ new SimpleBar( $('.comments__wrapper')[0], {
 		track: 'simplebar-track'
 	}
 });
+var mySwiper = new Swiper('.slider-post-small-slider .swiper-container', {
+	speed: 400,
+	slidesPerView: 1,
+	navigation: {
+		nextEl: '.slider-small-button--next',
+		prevEl: '.slider-small-button--prev',
+	},
+});

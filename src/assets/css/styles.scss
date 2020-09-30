@@ -1186,7 +1186,7 @@ i {
     overflow: hidden;
   }
 }
-
+/*------------ Comments and posts -------------*/
 .comments-and-posts{
   .simplebar-scrollbar::before {
     background-color: #0661f8;
@@ -1265,6 +1265,78 @@ i {
           box-shadow: 11px 0 7px -7px rgba(0, 0, 0, .1);
         }
       }
+    }
+  }
+  .slider-post-small{
+    &__content{
+      margin-top: 18px;
+      .post-small-title{
+        margin-bottom: 7px;
+        p{
+          font-size: 18px;
+          font-weight: 700;
+          line-height: 30px;
+        }
+      }
+    }
+    &__post-meta{
+      ul {
+        li {
+          padding-left: 18px;
+          span{
+            color: $text-color-2;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 30px;
+          }
+          li:last-child {
+            padding-left: 0;
+          }
+        }
+      }
+    }
+    &__navigation{
+      position: absolute;
+      bottom: -5px;
+      right: 22px;
+      height: 51px;
+      display: flex;
+      z-index: 1;
+      align-items: center;
+      .slider-small-button{
+        position: relative;
+        &::before{
+          display: block;
+          position: absolute;
+          width: 9px;
+          height: 14px;
+          background-color: black;
+          top: 50%;
+          right: 50%;
+          transform: translate( 50%, -50% );
+        }
+        width: 51px;
+        height: 51px;
+        background-color: #f8f8f8;
+        border-radius: 51px;
+        &--next{
+          margin-left: -5px;
+          &::before{
+            content: '';
+          }
+        }
+        &--prev{
+          margin-right: -5px;
+          &::before{
+            content: '';
+          }
+        }
+      }
+    }
+    &__navigation--left{
+      left: 10px;
+      right: unset;
+
     }
   }
 }
@@ -1358,6 +1430,11 @@ i {
         }
       }
     }
+  }
+
+  /*Comments and posts*/
+  .comments{
+    margin-bottom: 20px;
   }
 }
 
