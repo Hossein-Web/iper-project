@@ -89,3 +89,9 @@ var services =  new Swiper( '.services-slider__wrapper .swiper-container', {
 		clickable: true
 	},
 });
+
+// Social media hover events
+$( '.footer-social-media li' ).on( 'mouseover', function (e) {
+	$(this).addClass('active');
+	$(this).siblings().removeClass( 'active' )
+} );
