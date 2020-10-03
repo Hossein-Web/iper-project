@@ -83,12 +83,23 @@ var mySwiper = new Swiper('.slider-post-small-slider .swiper-container', {
 var services =  new Swiper( '.services-slider__wrapper .swiper-container', {
 	speed: 400,
 	spaceBetween: 30,
-	slidesPerView: 4,
+	slidesPerView: 1,
 	pagination: {
 		el: '.swiper-pagination',
 		type: 'bullets',
 		clickable: true
 	},
+	breakpoints: {
+		576: {
+			slidesPerView: 2,
+		},
+		768: {
+			slidesPerView: 2.5,
+		},
+		992: {
+			slidesPerView: 4,
+		}
+	}
 });
 
 //Mega menu
