@@ -97,3 +97,8 @@ $( '.tab-title > div' ).on( 'click', function () {
 	let tab_content = $( this ).data( 'tab' );
 	$( 'div[data-tabc =' + tab_content + ']' ).toggleClass( 'active' );
 } );
+// Social media hover events
+$( '.footer-social-media li' ).on( 'mouseover', function (e) {
+	$(this).addClass('active');
+	$(this).siblings().removeClass( 'active' )
+} );
