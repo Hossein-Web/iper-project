@@ -198,6 +198,26 @@ i {
   height: 15px;
   display: inline-block;
 }
+
+.post-navigation{
+  li{
+    color: $text-color-2;
+    font-weight: 500;
+  }
+  &--small{
+    li{
+      font-size: 12px;
+    }
+  }
+  &--medium{
+    li{
+      font-size: 14px;
+      &:not( :last-child ){
+        padding-left: 22px;
+      }
+    }
+  }
+}
 /*------------ Top live prices -------------*/
 .top-live-prices {
   .currency-list-wrapper {
@@ -690,13 +710,10 @@ i {
           display: inline-block;
         }
 
-        &__links {
+        .post-navigation {
           display: flex;
-
           li {
-            font-size: 12px;
-            font-weight: 500;
-
+            color: white;
             &:not( :last-child ) {
               margin-left: 21px;
             }
@@ -785,19 +802,6 @@ i {
           color: black;
           z-index: 2;
           padding-right: 23px;
-
-          ul {
-            li {
-              padding-left: 23px;
-              color: $text-color-2;
-              font-size: 14px;
-              font-weight: 500;
-
-              li:last-child {
-                padding-left: 0;
-              }
-            }
-          }
         }
 
         .meta-background {
@@ -869,9 +873,6 @@ i {
         ul {
           li {
             padding-left: 15px;
-            font-size: 12px;
-            font-weight: 500;
-            color: $text-color-2;
           }
         }
       }
@@ -1380,12 +1381,6 @@ i {
           padding-top: 6px;
           padding-left: 6px;
         }
-      }
-      li:not( :last-child ){
-        padding-left: 22px;
-        color: $text-color-2;
-        font-size: 14px;
-        font-weight: 500;
       }
     }
   }
