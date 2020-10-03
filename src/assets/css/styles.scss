@@ -230,6 +230,12 @@ i {
   padding-top: 40px;
   padding-bottom: 40px;
   box-shadow: 0 -50px 45px -30px rgba(0, 0, 0, 0.11), 0 50px 45px -30px rgba(0, 0, 0, 0.11);
+  &__wrapper{
+    position: relative;
+    div[class^="col-"]{
+      position: static;
+    }
+  }
   &__menu-user-links-wrapper{
     .main-menu {
       font-size: 14px;
@@ -240,6 +246,133 @@ i {
         padding-left: 35px;
         &:last-child {
           padding-left: 0;
+        }
+        &.mega-menu{
+         &:hover{
+           .main-menu__mega-menu{
+             visibility: visible;
+             opacity: 1;
+             top: 160%;
+           }
+         }
+
+        }
+      }
+      &__mega-menu{
+        position: absolute;
+        top: 150%;
+        width: 100%;
+        background-color: white;
+        right: 0;
+        z-index: 5;
+        padding: 30px 30px 30px 0;
+        display: flex;
+        visibility: hidden;
+        opacity: 0;
+        transition: 0.3s;
+        &::before{
+          content: url("../../assets/img/mega-background.png");
+          display: block;
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          z-index: 0;
+        }
+        .tab-title{
+          width: 25%;
+          position: relative;
+          &::before{
+            content: '';
+            position: absolute;
+            display: block;
+            width: 2px;
+            height: 100%;
+            background-color: #ebebeb;
+            left: 0;
+          }
+          div{
+            padding-bottom: 2px;
+            span{
+              color: #424242;
+              font-size: 16px;
+              font-weight: 500;
+              line-height: 48px;
+              margin-right: 0;
+              transition: 0.3s;
+              cursor: pointer;
+              &::before{
+                right: -15px;
+                content: '';
+                position: absolute;
+                height: 2px;
+                padding-right: 0;
+                background-color: #0661f8;
+                top: 50%;
+                transform: translateY(-50%);
+                visibility: hidden;
+                transition: 0.3s;
+              }
+            }
+            &.active{
+              span{
+                color: #0661f8;
+                position: relative;
+                margin-right: 10px;
+                &::before{
+                  visibility: visible;
+                  padding-right: 7px;
+                }
+              }
+            }
+          }
+        }
+        .tab-content{
+          width: 75%;
+          padding-right: 30px;
+          transition: 0.3s;
+          .mega-menu-wrapper{
+            opacity: 0;
+            transition: 0.3s;
+            right: 10px;
+            position: relative;
+            &.active{
+              opacity: 1;
+              right: 0;
+            }
+          }
+          .mega-menu-header{
+            p{
+              color: #080808;
+              font-size: 16px;
+              font-weight: 500;
+              line-height: 48px;
+            }
+          }
+          .mega-menu-content{
+            .mega-menu-content-column{
+              &:not( :last-child ){
+                padding-left: 18px;
+              }
+              a{
+                color: #7a7a7a;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 48px;
+                position: relative;
+                margin-right: 10px;
+                &::before{
+                  content: '';
+                  position: absolute;
+                  display: block;
+                  background-color: #7a7a7a;
+                  width: 6px;
+                  height: 2px;
+                  top: 50%;
+                  right: -10px;
+                }
+              }
+            }
+          }
         }
       }
     }

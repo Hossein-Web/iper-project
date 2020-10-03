@@ -41,64 +41,161 @@
 </div><!-- .top-live-prices -->
 <header class="header">
     <div class="container">
-        <div class="row align-items-center">
-            <div class="col-xl-5 col-24">
-                <div class="header__logo">
-                    <a href="#">
-                        <img src="./assets/img/logo.png" alt="پرشین بورس">
-                    </a>
-                </div><!-- .logo -->
-            </div><!-- .col-xl-5 -->
-            <div class="col-xl-19 col-24">
-                <div class="header__menu-user-links-wrapper d-flex justify-content-between align-items-center">
-                    <span class="mobile-menu-button"></span>
-                    <nav class="main-menu">
-                        <ul class="list-inline">
-                            <li class="list-inline-item"><a href="#">ابزارهای معاملاتی</a></li>
-                            <li class="list-inline-item"><a href="#">اخبار</a></li>
-                            <li class="list-inline-item"><a href="#">آموزش</a></li>
-                            <li class="list-inline-item"><a href="#">گروه های بورس</a></li>
-                            <li class="list-inline-item"><a href="#">عرضه اولیه</a></li>
-                        </ul>
-                    </nav><!-- .main-menu-->
-                    <div class="user-links">
-                        <ul class="d-flex justify-content-end align-items-center list-inline">
-                            <li class="search list-inline-item">
-                                <span><i></i></span>
-                                <form class="search__form" action="#">
-                                    <input type="search" placeholder="جستجو">
-                                </form>
-                            </li>
-                            <li class="user-profile list-inline-item">
-                                <a href="#">
+        <div class="header__wrapper">
+            <div class="row align-items-center">
+                <div class="col-xl-5 col-24">
+                    <div class="header__logo">
+                        <a href="#">
+                            <img src="./assets/img/logo.png" alt="پرشین بورس">
+                        </a>
+                    </div><!-- .logo -->
+                </div><!-- .col-xl-5 -->
+                <div class="col-xl-19 col-24">
+                    <div class="header__menu-user-links-wrapper d-flex justify-content-between align-items-center">
+                        <span class="mobile-menu-button"></span>
+                        <nav class="main-menu">
+                            <ul class="list-inline">
+                                <li class="list-inline-item mega-menu">
+                                    <a href="#">ابزارهای معاملاتی</a>
+                                    <!--                                            <div data-tabindex="popular">-->
+                                    <!--                                                <div class="tab-title ">-->
+                                    <!--                                                    <div data-tab="apps" data-parent="popular"></div>-->
+                                    <!--                                                </div>-->
+                                    <!--                                                <div class="tab-content">-->
+                                    <!--                                                    <div data-tabc="apps" data-parent="popular"></div>-->
+                                    <!--                                                </div>-->
+                                    <!--                                            </div>-->
+                                    <div class="main-menu__mega-menu" data-tabindex="popular">
+                                        <div class="tab-title ">
+                                            <div data-tab="apps-1" data-parent="popular">
+                                                <span>اخبار</span>
+                                            </div>
+                                            <div data-tab="apps-2" data-parent="popular">
+                                                <span>گروه های بورس</span>
+                                            </div>
+                                            <div data-tab="apps-3" data-parent="popular">
+                                                <span>عرضه اولیه</span>
+                                            </div>
+                                            <div data-tab="apps-4" data-parent="popular">
+                                                <span>ابزار های معاملاتی</span>
+                                            </div>
+                                            <div data-tab="apps-5" data-parent="popular">
+                                                <span>تماس با ما</span>
+                                            </div>
+                                        </div>
+                                        <div class="tab-content">
+                                            <div class="mega-menu-wrapper" data-tabc="apps-2" data-parent="popular">
+                                                <div class="mega-menu-header">
+                                                    <p>گروه های بورس</p>
+                                                </div><!-- .mega-menu-header -->
+                                                <div class="mega-menu-content d-flex">
+                                                    <div class="mega-menu-content-column">
+                                                        <ul>
+                                                            <li>
+                                                                <a href="#">زراعت و خدمات وابسته</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">استخراج نفت و گاز</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">محصولات شیمیایی</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">حمل ونقل، انبارداري وارتباطات</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">هتل و رستوران</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div><!-- .mega-menu-content-column -->
+                                                    <div class="mega-menu-content-column">
+                                                        <ul>
+                                                            <li>
+                                                                <a href="#">محصولات غذايي</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">اطلاعات و ارتباطات</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">استخراج زغال سنگ</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">رايانه و فعاليت‌هاي وابسته به آن</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">بانكها و موسسات اعتباري</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div><!-- .mega-menu-content-column -->
+                                                    <div class="mega-menu-content-column">
+                                                        <ul>
+                                                            <li>
+                                                                <a href="#">محصولات غذايي</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">اطلاعات و ارتباطات</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">استخراج زغال سنگ</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">رايانه و فعاليت‌هاي وابسته به آن</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">بانكها و موسسات اعتباري</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div><!-- .mega-menu-content-column -->
+                                                </div><!-- .mega-menu-content -->
+                                            </div><!-- .mega-menu-wrapper -->
+                                        </div><!-- .tab-content -->
+                                    </div><!-- .main-menu__mega-menu -->
+                                </li>
+                                <li class="list-inline-item"><a href="#">اخبار</a></li>
+                                <li class="list-inline-item"><a href="#">آموزش</a></li>
+                                <li class="list-inline-item"><a href="#">گروه های بورس</a></li>
+                                <li class="list-inline-item"><a href="#">عرضه اولیه</a></li>
+                            </ul>
+                        </nav><!-- .main-menu-->
+                        <div class="user-links">
+                            <ul class="d-flex justify-content-end align-items-center list-inline">
+                                <li class="search list-inline-item">
                                     <span><i></i></span>
-                                </a>
-                            </li>
-                            <li class="notification list-inline-item">
-                                <a href="#">
-                                    <span><i></i></span>
-                                    <span class="notification__is-active"></span>
-                                </a>
-                                <div class="notification__notification-list">
-                                    <ul>
-                                        <li><a href="#">آیتم اول</a></li>
-                                        <li><a href="#">آیتم دوم</a></li>
-                                        <li><a href="#">آیتم سوم</a></li>
-                                        <li><a href="#">آیتم چهارم</a></li>
-                                        <li><a href="#">آیتم پنجم</a></li>
-                                    </ul>
-                                </div><!-- .notification__list -->
-                            </li>
-                            <li class="where-button list-inline-item">
-                                <a href="#">
-                                    ازکجا شروع کنم؟
-                                </a>
-                            </li>
-                        </ul>
-                    </div><!-- .header__user-links -->
-                </div><!-- .header__menu-user-links-wrapper -->
-            </div><!-- .col-xl-19 -->
-        </div><!-- .row -->
+                                    <form class="search__form" action="#">
+                                        <input type="search" placeholder="جستجو">
+                                    </form>
+                                </li>
+                                <li class="user-profile list-inline-item">
+                                    <a href="#">
+                                        <span><i></i></span>
+                                    </a>
+                                </li>
+                                <li class="notification list-inline-item">
+                                    <a href="#">
+                                        <span><i></i></span>
+                                        <span class="notification__is-active"></span>
+                                    </a>
+                                    <div class="notification__notification-list">
+                                        <ul>
+                                            <li><a href="#">آیتم اول</a></li>
+                                            <li><a href="#">آیتم دوم</a></li>
+                                            <li><a href="#">آیتم سوم</a></li>
+                                            <li><a href="#">آیتم چهارم</a></li>
+                                            <li><a href="#">آیتم پنجم</a></li>
+                                        </ul>
+                                    </div><!-- .notification__list -->
+                                </li>
+                                <li class="where-button list-inline-item">
+                                    <a href="#">
+                                        ازکجا شروع کنم؟
+                                    </a>
+                                </li>
+                            </ul>
+                        </div><!-- .header__user-links -->
+                    </div><!-- .header__menu-user-links-wrapper -->
+                </div><!-- .col-xl-19 -->
+            </div><!-- .row -->
+        </div><!-- .header__wrapper -->
     </div><!-- .container -->
     <div class="header__mobile-menu-wrapper">
         <div class="mobile-button">

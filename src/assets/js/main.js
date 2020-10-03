@@ -18,6 +18,7 @@ $(window).on('load', () => {
 	}, 2000);
 	AOS.init();
 });
+tabInit();
 //mobile menu
 $('.mobile-menu-button').on('click', function () {
 	$('.header__mobile-menu-wrapper').addClass('mobile-menu-open');
@@ -89,3 +90,10 @@ var services =  new Swiper( '.services-slider__wrapper .swiper-container', {
 		clickable: true
 	},
 });
+
+//Mega menu
+$( '.tab-title > div' ).on( 'click', function () {
+	console.log(  );
+	let tab_content = $( this ).data( 'tab' );
+	$( 'div[data-tabc =' + tab_content + ']' ).toggleClass( 'active' );
+} );

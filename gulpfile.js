@@ -69,7 +69,8 @@ Header & Footer JavaScript Boundles
 -------------------------------------------------------------------------------------------------- */
 const headerJS = [
 	'./node_modules/aos/dist/aos.js',
-	'./node_modules/simplebar/dist/simplebar.min.js'
+	'./node_modules/simplebar/dist/simplebar.min.js',
+    './src/assets/js/tabs.js'
 ];
 const footerJS = [
 	'./node_modules/webfontloader/webfontloader.js',
