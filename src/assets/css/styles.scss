@@ -1678,6 +1678,11 @@ i {
   position: relative;
   &__wrapper{
     position: relative;
+    .swiper-slide-active{
+      .services-title{
+        color: #0661f8;
+      }
+    }
     .swiper-pagination{
       width: 100%;
       .swiper-pagination-bullet{
