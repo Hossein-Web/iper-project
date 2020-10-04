@@ -939,11 +939,6 @@ i {
 /*------------ Live prices -------------*/
 .live-prices{
   margin-bottom: 40px;
-  .col-xl-8{
-    &:not( :last-child ){
-      padding-left: 30px;
-    }
-  }
   &__item{
     box-shadow: -9px 11px 18px rgba(0, 0, 0, 0.05);
     border-radius: 15px;
