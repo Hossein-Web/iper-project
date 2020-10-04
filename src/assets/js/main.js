@@ -47,8 +47,8 @@ let latest_news_articles = new Swiper( '.latest-news-articles__slider> .swiper-c
 // Post-slider slider
 let post_slider_slider = new Swiper( '.post-slider__slider> .swiper-container', {
 	navigation: {
-		nextEl: '.post-slide-button--next',
-		prevEl: '.post-slide-button--prev',
+		nextEl: '.post-slider__slider .navigation-button--next',
+		prevEl: '.post-slider__slider .navigation-button--prev',
 	},
 } );
 
@@ -86,8 +86,8 @@ var mySwiper = new Swiper('.slider-post-small-slider .swiper-container', {
 	speed: 400,
 	slidesPerView: 1,
 	navigation: {
-		nextEl: '.slider-small-button--next',
-		prevEl: '.slider-small-button--prev',
+		nextEl: '.slider-post-small-slider .navigation-button--next',
+		prevEl: '.slider-post-small-slider .navigation-button--prev',
 	},
 });
 
