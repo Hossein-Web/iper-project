@@ -712,6 +712,15 @@ i {
         height: 399px;
         position: relative;
         flex: 1 0 auto;
+        &::before{
+          content: '';
+          display: block;
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background-image: linear-gradient( to top, rgba( 0, 0, 0, 0.7 ), rgba( 0, 0, 0, 0.01 ) );
+          border-radius: 20px;
+        }
         &:not( :last-child ) {
           margin-bottom: 18px;
         }
