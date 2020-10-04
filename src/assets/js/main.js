@@ -64,14 +64,14 @@ let tile_post = new Swiper( '.tile-post .swiper-container',{
 } );
 
 // Side tab
-$( '.side-tab__tab_links a' ).on( 'click', function (e) {
-		e.preventDefault();
-		let tab_id = $(this).attr("href");
-		$(".side-tab__tab_links a,.side-tab__tab_content").removeClass("active");
-		$(".side-tab__tab_content").fadeOut();
-		$(tab_id).fadeIn();
-		$(this).addClass("active");
-});
+// $( '.side-tab__tab_links a' ).on( 'click', function (e) {
+// 		e.preventDefault();
+// 		let tab_id = $(this).attr("href");
+// 		$(".side-tab__tab_links a,.side-tab__tab_content").removeClass("active");
+// 		$(".side-tab__tab_content").fadeOut();
+// 		$(tab_id).fadeIn();
+// 		$(this).addClass("active");
+// });
 
 
 //comments section scroll
