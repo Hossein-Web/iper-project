@@ -19,6 +19,7 @@ $(window).on('load', () => {
 	AOS.init();
 });
 tabInit();
+
 //mobile menu
 $('.mobile-menu-button').on('click', function () {
 	$('.header__mobile-menu-wrapper').addClass('mobile-menu-open');
@@ -49,6 +50,17 @@ let post_slider_slider = new Swiper( '.post-slider__slider> .swiper-container', 
 		nextEl: '.post-slide-button--next',
 		prevEl: '.post-slide-button--prev',
 	},
+} );
+
+// Tile post
+let tile_post = new Swiper( '.tile-post .swiper-container',{
+	spaceBetween: 20,
+	loop: true,
+	slidesPerView: 1,
+	speed: 1000,
+	autoplay: {
+		delay: 3000
+	}
 } );
 
 // Side tab
