@@ -1479,6 +1479,7 @@ i {
 
 /*------------ Comments and posts -------------*/
 .comments-and-posts{
+  margin-bottom: 46px;
   .simplebar-scrollbar::before {
     background-color: #0661f8;
     opacity: 1;
@@ -1488,16 +1489,22 @@ i {
   .simplebar-track{
     background-color: #ebebeb;
     width: 4px;
+    margin-top: 25px;
   }
   .comments{
     &__title{
       margin-bottom: 38px;
+      h5{
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 30px;
+      }
     }
     &__wrapper{
       direction: ltr;
       padding-left: 25px;
       padding-right: 25px;
-      height: 350px;
+      height: 450px;
       ul{
         direction: rtl;
       }
@@ -1506,14 +1513,9 @@ i {
         &:not( :last-child ){
           border-bottom: 2px solid #ebebeb;
         }
-        &:first-child{
-          .comment-content{
-            padding-top: 0;
-          }
-        }
         &:hover{
           .view-more{
-            height: 100%;
+            opacity: 1;
             visibility: visible;
           }
         }
@@ -1524,25 +1526,24 @@ i {
       }
       .comment-content{
         padding-right: 11px;
-        padding-top: 20px;
+        padding-top: 18px;
         color: #38424c;
         p:first-child{
-          padding-bottom: 11px;
           font-size: 16px;
           font-weight: 700;
+          line-height: 30px;
         }
         p:nth-child(2){
-          padding-bottom: 22px;
+          padding-bottom: 17px;
           font-size: 14px;
           font-weight: 500;
-
+          line-height: 30px;
         }
         .view-more{
           position: absolute;
           left: 0;
           top: 50%;
           transform: translateY(-50%);
-          height: 0;
           transition: 0.3s;
           font-size: 16px;
           display: flex;
@@ -1551,9 +1552,12 @@ i {
           color: $accent-color;
           background-color: white;
           padding-right: 27px;
-          padding-left: 15px;
           visibility: hidden;
           box-shadow: 11px 0 7px -7px rgba(0, 0, 0, .1);
+          height: 100%;
+          width: 155px;
+          line-height: 30px;
+          opacity: 0;
         }
       }
     }
@@ -1587,7 +1591,7 @@ i {
       }
     }
     .post-slider-navigation{
-      bottom: -5px;
+      bottom: 0;
     }
   }
 }
