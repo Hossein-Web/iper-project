@@ -499,6 +499,7 @@ i {
       }
     }
     .user-links {
+      position: relative;
       li {
         padding-left: 23px;
         &:last-child {
@@ -606,8 +607,8 @@ i {
     bottom: 0;
     width: 250px;
     height: 100vh;
-    background-color: #e8e2e2;
-    transition: all 0.5s;
+    background-color: white;
+    transition: all cubic-bezier(0,-0.68,.68,.19) 0.5s;
     z-index: 300;
     &.mobile-menu-open {
       opacity: 1;
@@ -615,7 +616,7 @@ i {
     }
 
     .mobile-button {
-      background-color: white;
+      background-color: black;
       width: 30px;
       height: 30px;
       margin-top: 5px;
