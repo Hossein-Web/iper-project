@@ -343,6 +343,8 @@ i {
   padding-top: 40px;
   padding-bottom: 40px;
   box-shadow: 0 -50px 45px -30px rgba(0, 0, 0, 0.11), 0 50px 45px -30px rgba(0, 0, 0, 0.11);
+  z-index: 2;
+  position: relative;
   &__wrapper{
     position: relative;
     div[class^="col-"]{
@@ -2046,6 +2048,13 @@ footer{
 
         .swiper-container {
           max-height: unset !important;
+          .swiper-slide{
+            a{
+              color: $text-color-2;
+              font-size: 16px;
+              font-weight: 500;
+            }
+          }
         }
       }
     }
