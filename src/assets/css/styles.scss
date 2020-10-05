@@ -5,24 +5,25 @@
 
 /*
 Table of content
--Fonts
--General
--Top live prices
--Header
--Header bottom
--Tile post
--Ads
--last post
--Live prices
--Post
--offer posts
--Post slider
--Side tab
--Side populars
--Side video
--Suggest bourse
--Footer
--Log sign
+-Index
+--Fonts
+--General
+--Top live prices
+--Header
+--Header bottom
+--Tile post
+--Ads
+--last post
+--Live prices
+--Post
+--offer posts
+--Post slider
+--Side tab
+--Side populars
+--Side video
+--Suggest bourse
+--Footer
+-Log-sign
 -Media queries
 */
 
@@ -1913,32 +1914,37 @@ footer{
 }
 
 /*------------ Log sign -------------*/
-.sign-in{
+.sign-in {
   padding: 0 23px;
-  &__header{
+
+  &__header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-bottom: 2px solid $background-color;
     margin-bottom: 20px;
     padding: 13px 0;
-      h5{
-        color: $text-color-2;
-        font-size: 20px;
-        font-weight: 700;
-      }
-      a{
-        color: $text-color;
-        font-size: 12px;
-        font-weight: 400;
-      }
+
+    h5 {
+      color: $text-color-2;
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    a {
+      color: $text-color;
+      font-size: 12px;
+      font-weight: 400;
+    }
 
   }
-  &__form{
-    .sign-in-input-wrapper{
+
+  &__form {
+    .sign-in-input-wrapper {
       position: relative;
       margin-bottom: 20px;
-      input{
+
+      input {
         width: 100%;
         color: $text-color-2;
         padding: 16px 55px 16px 24px;
@@ -1946,13 +1952,15 @@ footer{
         border-radius: 10px;
         background-color: white;
         position: relative;
-        &::placeholder{
+
+        &::placeholder {
           color: #9ca6b2;
           font-size: 13px;
           font-weight: 500;
         }
       }
-      .sign-in-input-icon{
+
+      .sign-in-input-icon {
         display: block;
         position: absolute;
         width: 14px;
@@ -1960,48 +1968,51 @@ footer{
         background-color: #9ca6b2;
         top: 50%;
         right: 22px;
-        transform: translateY( -50% );
-        &::before{
+        transform: translateY(-50%);
+
+        &::before {
           content: '';
           display: block;
           position: absolute;
         }
       }
-      .sign-in-input-validation{
+
+      .sign-in-input-validation {
         display: block;
         position: absolute;
         width: 9px;
         height: 7px;
         top: 50%;
         left: 16px;
-        transform: translateY( -50% );
-        &::before{
-          content: '';
-          display: block;
-          position: absolute;
-        }
-        &--valid{
+        transform: translateY(-50%);
+
+        &--valid {
           background-color: #45b40d;
-         }
-        &--invalid{
+        }
+
+        &--invalid {
           background-color: #ff4342;
         }
       }
     }
-    .sing-in-form-bottom{
+
+    .sing-in-form-bottom {
       display: flex;
       justify-content: space-between;
       align-items: center;
       margin-bottom: 20px;
-      p{
+
+      p {
         color: #8b96a2;
         font-size: 12px;
         font-weight: 500;
-        a{
+
+        a {
           color: #0661f8;
           padding-right: 16px;
           position: relative;
-          &::before{
+
+          &::before {
             position: absolute;
             content: '';
             display: block;
@@ -2013,7 +2024,8 @@ footer{
           }
         }
       }
-      button{
+
+      button {
         color: white;
         font-size: 16px;
         font-weight: 700;
@@ -2021,7 +2033,8 @@ footer{
         padding: 15px 25px 15px 20px;
         position: relative;
         border-radius: 5px;
-        i{
+
+        i {
           margin-right: 25px;
           display: inline-block;
           margin-bottom: -4px;
@@ -2030,7 +2043,104 @@ footer{
     }
   }
 }
-
+.log-in{
+  text-align: center;
+  box-shadow: -18px 18px 35px rgba(56, 66, 77, 0.05);
+  border-radius: 10px;
+  background-color: #ffffff;
+  margin-left: 28px;
+  padding-bottom: 23px;
+  &__title{
+    margin-bottom: 20px;
+    h5{
+      color: #38424c;
+      font-size: 20px;
+      font-weight: 700;
+      border-bottom: 2px solid #f8f8f8;
+      padding-bottom: 13px;
+    }
+  }
+  &__content{
+    form{
+      max-width: 300px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+    .log-in-field{
+      position: relative;
+      margin-bottom: 20px;
+      display: inline-block;
+      width: 100%;
+      i{
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY( -50% );
+        margin-right: 20px;
+      }
+      input{
+        width: 100%;
+        border: 1px solid #f8f8f8;
+        background-color: #ffffff;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        border-radius: 8px;
+        padding-right: 54px;
+        transition: 0.3s;
+        color: #9ca6b2;
+        font-size: 13px;
+        font-weight: 500;
+        &:focus{
+          border-color: #dddddd;
+        }
+      }
+    }
+    .verify-field{
+      span{
+        position: absolute;
+        left: 12px;
+        padding-right: 14px;
+        bottom: 50%;
+        transform: translateY(50%);
+        &::before{
+          content: '';
+          display: block;
+          position: absolute;
+          right: 0;
+          width: 1px;
+          height: 100%;
+          background-color: #dedede;
+        }
+      }
+    }
+    .log-in-submit{
+      width: 100%;
+      .forget-password{
+        color: #8b96a2;
+        font-size: 12px;
+        font-weight: 500;
+      }
+      button{
+        background-color: #0661f8;
+        border-radius: 8px;
+        color: #ffffff;
+        font-size: 16px ;
+        font-weight: 700;
+        padding: 8px 28px 15px 20px;
+        i{
+          margin-right: 18px;
+          opacity: 0;
+          transition: 0.3s;
+        }
+        &:hover{
+          i{
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}
 /*------------ Media queries -------------*/
 
 /*------------ < 1200px -------------*/
