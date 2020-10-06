@@ -2427,7 +2427,7 @@ footer {
   &__links {
     a {
       border-radius: 25px;
-      padding: 8px 20px 13px 15px;
+      padding: 10px 20px 12px 15px;
       background-color: #0661f8;
       color: white;
       font-size: 18px;
@@ -2441,8 +2441,9 @@ footer {
         margin-right: -6px;
       }
 
-      span {
+      i {
         margin-left: 13px;
+        font-size: 15px;
       }
     }
   }
