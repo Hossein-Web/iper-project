@@ -1,5 +1,6 @@
 @import '../../../node_modules/swiper/swiper-bundle';
 @import 'variables';
+@import 'style-icon';
 @import 'reset';
 @import '../../../node_modules/simplebar/dist/simplebar.min';
 
@@ -2199,9 +2200,16 @@ footer {
     box-shadow: -18px 18px 35px rgba(56, 66, 77, 0.05);
     background-color: white;
     border-radius: 10px;
-
-    .sign-in, .log-in {
-      &__title {
+    .sign-in, .log-in{
+      i{
+        color: #9ca6b2;
+      }
+      button{
+        i{
+          color: white;
+        }
+      }
+      &__title{
         margin-bottom: 20px;
         padding-bottom: 13px;
         border-bottom: 2px solid $background-color;
@@ -2230,7 +2238,6 @@ footer {
             width: 100%;
             color: $text-color-2;
             border: 1px solid $background-color;
-            border-radius: 10px;
             padding-top: 12px;
             padding-bottom: 12px;
             border-radius: 8px;
@@ -2288,32 +2295,16 @@ footer {
           input {
             padding-left: 24px;
           }
-
-          .sign-in-input-icon {
-            width: 14px;
-            height: 14px;
-            background-color: #9ca6b2;
-            top: 50%;
-
-            &::before {
-              content: '';
-              display: block;
-              position: absolute;
-            }
-          }
-
-          .sign-in-input-validation {
-            width: 9px;
-            height: 7px;
+          .field-validation {
             left: 16px;
             right: auto;
-
+            font-size: 9px;
             &--valid {
-              background-color: #45b40d;
+              color: #45b40d;
             }
 
             &--invalid {
-              background-color: #ff4342;
+              color: #ff4342;
             }
           }
         }
@@ -2330,12 +2321,11 @@ footer {
               position: relative;
 
               &::before {
+                font-family: persian;
+                font-size: 9px;
                 position: absolute;
-                content: '';
+                content: '\e916';
                 display: block;
-                width: 11px;
-                height: 9px;
-                background-color: $accent-color;
                 right: 0;
                 top: 5px;
               }
@@ -2453,7 +2443,7 @@ footer {
   &__links {
     a {
       border-radius: 25px;
-      padding: 8px 20px 13px 15px;
+      padding: 10px 20px 12px 15px;
       background-color: #0661f8;
       color: white;
       font-size: 18px;
@@ -2467,8 +2457,9 @@ footer {
         margin-right: -6px;
       }
 
-      span {
+      i {
         margin-left: 13px;
+        font-size: 15px;
       }
     }
   }
