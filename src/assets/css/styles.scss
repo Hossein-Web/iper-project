@@ -24,6 +24,7 @@ Table of content
 --Suggest bourse
 --Footer
 -Log-sign
+-404
 -Media queries
 */
 
@@ -2150,6 +2151,60 @@ footer{
     }
   }
 }
+
+/*------------ 404 -------------*/
+.not-found{
+  background-image: url( "../img/bourse-back.png" );
+  background-repeat: no-repeat;
+  background-position: center -130px;
+  background-size: contain;
+  margin-top: 350px;
+  position: relative;
+  &__content-wrapper{
+    position: absolute;
+    top: 68%;
+    right: 50%;
+    transform: translateX(50%);
+  }
+  .logo-content-wrapper{
+    margin-bottom: 21px;
+    .logo{
+      flex: 0 0 auto;
+    }
+  }
+  &__content{
+    margin-right: -42px;
+    color: #38424c;
+    h4{
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 19px;
+    }
+    p{
+      font-size: 20px;
+      font-weight: 500;
+    }
+  }
+  &__links{
+    a{
+      border-radius: 25px;
+      padding: 8px 20px 13px 15px;
+      background-color: #0661f8;
+      color: white;
+      font-size: 18px;
+      font-weight: 500;
+      &:first-child{
+        margin-left: -6px;
+      }
+      &:last-child{
+        margin-right: -6px;
+      }
+      span{
+        margin-left: 13px;
+      }
+    }
+  }
+}
 /*------------ Media queries -------------*/
 
 /*------------ < 1200px -------------*/
@@ -2233,6 +2288,11 @@ footer{
           margin-bottom: 19px;
         }
       }
+    }
+  }
+  .not-found{
+    &__content-wrapper{
+      width: 90%;
     }
   }
 }
@@ -2343,6 +2403,18 @@ footer{
 }
   .last-post__suggestion{
     flex-direction: column;
+  }
+  /*404 page*/
+  .not-found{
+    &__links{
+      flex-direction: column;
+      a{
+        margin-bottom: 20px;
+      }
+      span{
+        display: none;
+      }
+    }
   }
 }
 
