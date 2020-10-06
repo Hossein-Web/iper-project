@@ -137,8 +137,7 @@ body {
   position: relative;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 18px;
-
+  margin-bottom: 21px;
   &::before {
     content: '';
     display: block;
@@ -306,12 +305,11 @@ i {
   .currency-list-wrapper {
     display: flex;
     flex-wrap: wrap;
-
     &__item {
       text-align: left;
       color: $text-color;
       flex: 1 0 auto;
-
+      margin-bottom: 17px;
       .currency-name {
         font-size: 12px;
         font-weight: 500;
@@ -444,7 +442,6 @@ i {
         .tab-title {
           width: 25%;
           position: relative;
-
           &::before {
             content: '';
             position: absolute;
@@ -726,8 +723,8 @@ i {
 
 /*------------ Header bottom-------------*/
 .header-bottom {
-  padding-top: 13px;
-
+  padding-top: 21px;
+  margin-bottom: 8px;
   .latest-news-articles {
     display: flex;
 
@@ -1133,11 +1130,21 @@ i {
 /*------------ Live prices -------------*/
 .live-prices {
   margin-bottom: 40px;
-
+  position: relative;
+  &::before{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 40px;
+    bottom: 40px;
+    background-color: $background-color;
+  }
   &__item {
     box-shadow: -9px 11px 18px rgba(0, 0, 0, 0.05);
     border-radius: 15px;
     background-color: white;
+    margin-top: 21px;
   }
 }
 
@@ -1146,6 +1153,7 @@ i {
   margin-bottom: 28px;
 
   &__slider {
+    box-shadow: -9px 11px 18px rgba(0, 0, 0, 0.05);
     .swiper-slide {
       position: relative;
 
@@ -1225,7 +1233,7 @@ i {
 /*------------ Side tab -------------*/
 .side-tab {
   margin-bottom: 15px;
-
+  margin-top: 7px;
   &__tab_links {
     display: flex;
     justify-content: start;
@@ -1600,7 +1608,7 @@ i {
   box-shadow: -18px 18px 35px rgba(56, 66, 77, 0.05);
   border-radius: 10px;
   background-color: white;
-
+  margin-bottom: 24px;
   &__content {
     padding: 19px 20px 20px;
 
@@ -1630,11 +1638,28 @@ i {
 
 /*------------ offer posts -------------*/
 .offer-posts {
-  margin-bottom: 35px;
-
+  margin-bottom: 30px;
+  margin-top: 16px;
+  padding-top: 18px;
+  padding-bottom: 21px;
+  position: relative;
+  &::before{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    background-color: $background-color;
+  }
   .container {
     padding-right: 30px;
     padding-left: 30px;
+    .bourse-title{
+      h6,a{
+        background-color: $background-color;
+      }
+    }
   }
 
   &__item {
@@ -1719,16 +1744,7 @@ i {
   }
 
   .comments {
-    &__title {
-      margin-bottom: 38px;
-
-      h5 {
-        font-size: 18px;
-        font-weight: 700;
-        line-height: 30px;
-      }
-    }
-
+    box-shadow: -30px 0px 19px -13px rgba(0, 0, 0, 0.03);
     &__wrapper {
       direction: ltr;
       padding-left: 25px;
@@ -1853,7 +1869,7 @@ i {
     display: flex;
     flex-direction: column;
     justify-content: end;
-
+    margin-bottom: 44px;
     &:hover {
       .suggest-bourse-read-more {
         bottom: 12px;
