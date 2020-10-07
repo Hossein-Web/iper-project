@@ -227,7 +227,7 @@ i {
   display: inline-block;
 }
 
-.post-navigation {
+.bourse-post-meta {
   li {
     color: $text-color-2;
     font-weight: 500;
@@ -260,7 +260,9 @@ i {
 
   .navigation-button {
     position: relative;
-
+    &:hover{
+      cursor: pointer;
+    }
     &::before {
       display: block;
       position: absolute;
@@ -753,7 +755,7 @@ i {
 
   .secondary-menu {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
 
     &__item {
       a {
@@ -871,7 +873,7 @@ i {
             display: inline-block;
           }
 
-          .post-navigation {
+          .bourse-post-meta {
             display: flex;
 
             li {
@@ -1237,7 +1239,7 @@ i {
   margin-top: 7px;
   &__tab_links {
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
 
     div {
       color: #3c3c3c;
@@ -1273,6 +1275,15 @@ i {
     transition: 0.5s;
     position: relative;
     top: 10px;
+    ul{
+      a{
+        transition: 0.3s;
+        display: inline-block;
+        &:hover{
+          margin-right: 15px;
+        }
+      }
+    }
 
     &.active {
       opacity: 1;
@@ -1369,9 +1380,9 @@ i {
       display: flex;
       padding-right: 24px;
       position: relative;
-
+      padding-top: 5px;
       &:not( :last-child ) {
-        box-shadow: 0 55px 29px -35px rgba(0, 0, 0, 0.45);
+        box-shadow: 0 55px 29px -35px rgba(0, 0, 0, 0.12);
         margin-bottom: 23px;
       }
 
@@ -1437,7 +1448,7 @@ i {
   padding: 20px 23px 0 23px;
   border-radius: 10px;
   border: 1px solid $light-gray;
-
+  margin-bottom: 20px;
   &__title {
     position: relative;
     margin-bottom: 25px;
@@ -1483,7 +1494,7 @@ i {
       display: inline-block;
       margin-left: auto;
       margin-right: auto;
-      margin-bottom: 14px;
+      margin-bottom: 20px;
       position: relative;
       text-align: center;
 
@@ -1574,8 +1585,8 @@ i {
       flex-wrap: wrap;
 
       li {
-        margin-bottom: 21px;
-        flex: 1 0 auto;
+        margin-bottom: 17px;
+        flex: 0 0 auto;
 
         &:not( :last-child ) {
           padding-left: 28px;
@@ -1610,8 +1621,16 @@ i {
   border-radius: 10px;
   background-color: white;
   margin-bottom: 24px;
+  &__image{
+    text-align: center;
+    overflow: hidden;
+    max-height: 205px;
+    img{
+      width: 100%;
+    }
+  }
   &__content {
-    padding: 19px 20px 20px;
+    padding: 25px 20px 20px;
 
     .post-title {
       padding-bottom: 17px;
@@ -1869,7 +1888,7 @@ i {
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: end;
+    justify-content: flex-end;
     margin-bottom: 44px;
     &:hover {
       .suggest-bourse-read-more {
@@ -1968,9 +1987,9 @@ i {
     display: block;
     position: absolute;
     background-color: $background-color;
-    top: 25%;
+    top: 27%;
     width: 100%;
-    height: 70%;
+    bottom: 64px;
   }
 
   .services-container {
@@ -2069,7 +2088,7 @@ footer {
   .footer-copy-right {
     display: flex;
     align-items: center;
-    justify-content: start;
+    justify-content: flex-start;
 
     a {
       display: block;
@@ -2106,18 +2125,18 @@ footer {
 
   .footer-social-media {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
 
     ul {
       display: flex;
       flex-wrap: wrap;
-      justify-content: end;
+      justify-content: flex-end;
 
       li {
         display: flex;
         margin-bottom: 20px;
         align-items: start;
-        justify-content: end;
+        justify-content: flex-end;
         flex-grow: 0;
 
         &.active {
@@ -2582,7 +2601,7 @@ footer {
 }
 
 /*------------ < 576px -------------*/
-@media screen and (max-width: 576px) {
+@media only screen and (max-width: 576px) {
   /*Top live prices*/
   .top-live-prices {
     .currency-list-wrapper {
@@ -2683,6 +2702,12 @@ footer {
   }
 }
 
+/*------------ < 450px -------------*/
+@media only screen and (max-width: 450px) {
+  .container{
+    padding: 0 15px;
+  }
+}
 @keyframes wave {
   0% {
     -webkit-transform: scale(1);
