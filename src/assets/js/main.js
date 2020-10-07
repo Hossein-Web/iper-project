@@ -24,7 +24,7 @@ tabInit();
 $('.mobile-menu-button').on('click', function () {
 	$('.header__mobile-menu-wrapper').addClass('mobile-menu-open');
 });
-$('.mobile-button').on('click', function () {
+$('.mobile-close-button').on('click', function () {
 	if ($('.header__mobile-menu-wrapper').hasClass('mobile-menu-open')) {
 		$('.header__mobile-menu-wrapper').removeClass('mobile-menu-open');
 	}
