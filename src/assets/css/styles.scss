@@ -221,9 +221,6 @@ body {
 }
 
 i {
-  background-color: black;
-  width: 15px;
-  height: 15px;
   display: inline-block;
 }
 
@@ -260,16 +257,16 @@ i {
 
   .navigation-button {
     position: relative;
-
     &::before {
+      font-family: persian;
+      font-size: 8px;
+      line-height: 14px;
       display: block;
       position: absolute;
-      width: 9px;
-      height: 14px;
-      background-color: black;
       top: 50%;
       right: 50%;
       transform: translate(50%, -50%);
+      color: #38424c;
     }
 
     width: 51px;
@@ -281,7 +278,7 @@ i {
       margin-left: -5px;
 
       &::before {
-        content: '';
+        content: '\e901';
       }
     }
 
@@ -289,7 +286,7 @@ i {
       margin-right: -5px;
 
       &::before {
-        content: '';
+        content: "\e900";
       }
     }
   }
@@ -586,9 +583,11 @@ i {
 
       li {
         padding-left: 23px;
-
         &:last-child {
           padding-left: 0;
+        }
+        i{
+          color: #38424c;
         }
       }
 
@@ -925,9 +924,7 @@ i {
           position: absolute;
           left: 24px;
           bottom: 24px;
-          width: 20px;
-          height: 20px;
-          background-color: white;
+          color: white;
           z-index: 2;
         }
       }
@@ -1013,6 +1010,9 @@ i {
               font-size: 14px;
               font-weight: 500;
             }
+            i{
+              color: #9ca6b2;
+            }
           }
 
           .meta-background {
@@ -1094,6 +1094,12 @@ i {
         ul {
           li {
             padding-left: 15px;
+            span{
+              padding-left: 3px;
+            }
+            i{
+              color: #dedede;
+            }
           }
         }
       }
@@ -1134,6 +1140,16 @@ i {
       height: 33px;
       border-radius: 33px;
       background-color: $accent-color;
+      span{
+        position: absolute;
+        right: 50%;
+        transform: translate( 50%, -50% );
+        margin-top: 19px;
+      }
+      i{
+        color: white;
+        font-size: 19px;
+      }
     }
 
     .suggestion-title {
@@ -1334,7 +1350,7 @@ i {
               color: $accent-color;
 
               &::before {
-                background-color: $accent-color;
+                color: $accent-color;
               }
             }
           }
@@ -1349,12 +1365,12 @@ i {
 
             &::before {
               transition: 0.3s;
-              content: '';
+              content: "\e900";
+              font-family: persian;
+              font-size: 5px;
+              line-height: 9px;
               display: block;
               position: absolute;
-              width: 5px;
-              height: 9PX;
-              background-color: black;
               right: 0;
               top: 3px;
             }
@@ -1431,7 +1447,9 @@ i {
 
               &::after {
                 color: $accent-color;
-                background-color: $accent-color;
+                content: "\e908";
+                font-family: persian;
+                display: block;
               }
             }
           }
@@ -1574,12 +1592,11 @@ i {
         }
 
         &::before {
-          content: '';
+          content: "\e913";
+          font-family: persian;
           position: absolute;
           display: block;
-          width: 16px;
-          height: 16px;
-          background-color: white;
+          color: white;
           top: 50%;
           right: 50%;
           transform: translate(50%, -50%);
@@ -1662,8 +1679,10 @@ i {
 
     .post-meta {
       padding-top: 15px;
-
       li {
+        i{
+          color: #9ca6b2;
+        }
         > span:first-child {
           padding-top: 6px;
           padding-left: 6px;
@@ -1879,6 +1898,9 @@ i {
             font-size: 14px;
             font-weight: 500;
             line-height: 30px;
+            i{
+              color: #9ca6b2;
+            }
           }
 
           li:last-child {
@@ -2115,15 +2137,15 @@ footer {
       background-color: #ff4342;
 
       &::before {
-        content: '';
+        content: "\e90d";
+        font-family: persian;
+        font-size: 24px;
         display: block;
         position: absolute;
         top: 50%;
         right: 50%;
         transform: translate(50%, -50%);
-        width: 9px;
-        height: 24px;
-        background-color: white;
+        color: white;
 
       }
     }
@@ -2155,7 +2177,7 @@ footer {
         align-items: start;
         justify-content: end;
         flex-grow: 0;
-
+        cursor: pointer;
         &.active {
           .social-text-wrapper {
             width: 76px;
@@ -2168,7 +2190,7 @@ footer {
 
         &:hover {
           i {
-            background-color: #34495e;
+            color: #34495e;
           }
 
           .social-text-wrapper {
@@ -2176,7 +2198,7 @@ footer {
               color: #34495e;
 
               i {
-                background-color: #34495e;
+                color: #34495e;
               }
             }
           }
@@ -2184,11 +2206,10 @@ footer {
 
         .footer-social-icon {
           display: inline-block;
-          width: 19px;
-          height: 19px;
-          background-color: #8ba1b6;
+          color: #8ba1b6;
           margin-right: 7px;
           transition: 0.3s;
+          font-size: 19px;
         }
 
         .social-text-wrapper {
@@ -2207,12 +2228,11 @@ footer {
 
             i {
               display: inline-block;
-              width: 6px;
-              height: 9px;
-              background-color: #8ba1b6;
+              color: #8ba1b6;
+              font-size: 9px;
               position: absolute;
               right: 0;
-              top: 5px;
+              top: 6px;
               transition: 0.3s;
             }
           }
