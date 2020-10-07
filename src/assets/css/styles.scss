@@ -179,10 +179,9 @@ body {
     padding-right: 20px;
 
     i {
-      width: 10px;
-      height: 10px;
       margin-right: 10px;
       margin-bottom: -2px;
+      font-size: 9px;
     }
   }
 }
@@ -1300,7 +1299,6 @@ i {
       display: inline-block;
       font-size: 14px;
       font-weight: 500;
-      padding-inline: 0;
       background-color: transparent;
       padding-bottom: 20px;
       margin: 0 21px;
@@ -2623,6 +2621,14 @@ footer {
   .not-found {
     &__content-wrapper {
       width: 90%;
+    }
+  }
+
+  /*Footer bottom*/
+  .footer-bottom{
+    .footer-social-media{
+      justify-content: center;
+      margin-top: 30px;
     }
   }
 }
