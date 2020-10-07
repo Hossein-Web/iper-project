@@ -1624,7 +1624,7 @@ i {
 
     .video-post-meta {
       display: flex;
-      flex-wrap: wrap;
+      //flex-wrap: wrap;
 
       li {
         margin-bottom: 21px;
@@ -1638,19 +1638,13 @@ i {
           color: $text-color-2;
           display: inline-block;
           position: relative;
-          padding-right: 19px;
           font-size: 14px;
           font-weight: 500;
-
-          &::before {
-            position: absolute;
-            content: '';
-            display: block;
-            width: 13px;
-            height: 13px;
-            background-color: $text-color-2;
-            right: 0;
-            margin-top: 4px;
+          &:first-child{
+            padding-left: 6px;
+          }
+          i{
+            color: $text-color-2;
           }
         }
       }
