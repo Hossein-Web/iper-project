@@ -52,7 +52,11 @@
                 </div><!-- .col-xl-5 -->
                 <div class="col-xl-19 col-24">
                     <div class="header__menu-user-links-wrapper d-flex justify-content-between align-items-center">
-                        <span class="mobile-menu-button"></span>
+                        <div class="mobile-menu-button">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
                         <nav class="main-menu">
                             <ul class="list-inline">
                                 <li class="list-inline-item mega-menu">
@@ -152,19 +156,21 @@
                         <div class="user-links">
                             <ul class="d-flex justify-content-end align-items-center list-inline">
                                 <li class="search list-inline-item">
-                                    <span><i></i></span>
-                                    <form class="search__form" action="#">
+                                    <span><i class="persian persian-search"></i></span>
+                                    <form class="search__form" action="#" method="get">
                                         <input type="search" placeholder="جستجو">
+                                        <button type="submit">
+                                        </button>
                                     </form>
                                 </li>
                                 <li class="user-profile list-inline-item">
                                     <a href="#">
-                                        <span><i></i></span>
+                                        <span><i class="persian persian-user"></i></span>
                                     </a>
                                 </li>
                                 <li class="notification list-inline-item">
                                     <a href="#">
-                                        <span><i></i></span>
+                                        <span><i class="persian persian-notification"></i></span>
                                         <span class="notification__is-active"></span>
                                     </a>
                                     <div class="notification__notification-list">
@@ -190,8 +196,9 @@
         </div><!-- .header__wrapper -->
     </div><!-- .container -->
     <div class="header__mobile-menu-wrapper">
-        <div class="mobile-button">
-            <span></span>
+        <div class="mobile-close-button">
+            <!--<span class="mobile-close-button__top"></span>-->
+            <!--<span class="mobile-close-button__bottom"></span>-->
         </div>
         <div class="mobile-logo">
             <a href="#">
