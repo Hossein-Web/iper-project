@@ -1447,9 +1447,7 @@ i {
 
               &::after {
                 color: $accent-color;
-                content: "\e908";
-                font-family: persian;
-                display: block;
+                opacity: 1;
               }
             }
           }
@@ -1463,15 +1461,13 @@ i {
             position: relative;
 
             &::after {
+              content: "\e908";
+              font-family: persian;
               transition: 0.3s;
-              content: '';
-              display: block;
+              opacity: 0;
               position: absolute;
               left: 40px;
               top: 0;
-              width: 21px;
-              height: 21px;
-              background-color: transparent;
             }
           }
         }
@@ -1644,7 +1640,7 @@ i {
             padding-left: 6px;
           }
           i{
-            color: $text-color-2;
+            color: #9ca6b2;
           }
         }
       }
