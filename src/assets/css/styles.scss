@@ -1736,24 +1736,31 @@ i {
 
     .item-image {
       cursor: pointer;
-
-      &::before {
-        opacity: 0;
-        border-radius: 5px;
+      img{
+        filter: grayscale(100%);
         transition: 0.3s;
-        position: absolute;
-        content: '';
-        display: block;
-        width: 100%;
-        height: 100%;
-        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 75%, rgba(2, 2, 2, 0.7) 100%);
       }
+
+      //&::before {
+      //  opacity: 0;
+      //  border-radius: 5px;
+      //  transition: 0.3s;
+      //  position: absolute;
+      //  content: '';
+      //  display: block;
+      //  width: 100%;
+      //  height: 100%;
+      //  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 75%, rgba(2, 2, 2, 0.7) 100%);
+      //}
     }
 
     &:hover {
       .item-image {
-        &::before {
-          opacity: 0.8;
+        //&::before {
+        //  opacity: 0.8;
+        //}
+        img{
+          filter: grayscale(0);
         }
       }
 
@@ -2256,7 +2263,7 @@ footer {
 /*------------ Log sign -------------*/
 .log-sign {
   position: relative;
-  z-index: 2;
+  z-index: 1;
   background-image: url("../img/bourse-back.png");
   background-position: top center;
   background-repeat: no-repeat;
@@ -2333,6 +2340,10 @@ footer {
             padding: 12px 28px 12px 20px;
             position: relative;
             border-radius: 8px;
+            i{
+              position: relative;
+              bottom: -3px;
+            }
           }
         }
       }
@@ -2451,14 +2462,7 @@ footer {
           button {
             i {
               margin-right: 18px;
-              opacity: 0;
               transition: 0.3s;
-            }
-
-            &:hover {
-              i {
-                opacity: 1;
-              }
             }
           }
         }
@@ -2558,17 +2562,6 @@ footer {
       padding-right: 0;
     }
   }
-
-  /*side video*/
-  //.side-video{
-  //  &__content{
-  //    .poster-wrapper{
-  //      &::before{
-  //        display: none;
-  //      }
-  //    }
-  //  }
-  //}
 }
 
 /*------------ < 992px -------------*/
@@ -2624,6 +2617,13 @@ footer {
     }
   }
 
+  /*Offer posts*/
+  .offer-posts{
+    &__item{
+      margin-bottom: 20px;
+    }
+  }
+
   /*Footer bottom*/
   .footer-bottom{
     .footer-social-media{
@@ -2653,6 +2653,16 @@ footer {
   /*Comments and posts*/
   .comments {
     margin-bottom: 20px;
+  }
+
+  /*offer-posts*/
+  .offer-posts{
+    &__item{
+      display: block;
+      width: 265px;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 }
 

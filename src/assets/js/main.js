@@ -63,25 +63,18 @@ let tile_post = new Swiper( '.tile-post .swiper-container',{
 	}
 } );
 
-// Side tab
-// $( '.side-tab__tab_links a' ).on( 'click', function (e) {
-// 		e.preventDefault();
-// 		let tab_id = $(this).attr("href");
-// 		$(".side-tab__tab_links a,.side-tab__tab_content").removeClass("active");
-// 		$(".side-tab__tab_content").fadeOut();
-// 		$(tab_id).fadeIn();
-// 		$(this).addClass("active");
-// });
-
-
 //comments section scroll
-new SimpleBar( $('.comments__wrapper')[0], {
-	classNames: {
-		// defaults
-		scrollbar: 'simplebar-scrollbar',
-		track: 'simplebar-track'
-	}
-});
+if ( $('.comments__wrapper').length ){
+	new SimpleBar( $('.comments__wrapper')[0], {
+		classNames: {
+			// defaults
+			scrollbar: 'simplebar-scrollbar',
+			track: 'simplebar-track'
+		}
+	});
+}
+
+// Post small slider
 var mySwiper = new Swiper('.slider-post-small-slider .swiper-container', {
 	speed: 400,
 	slidesPerView: 1,
