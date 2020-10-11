@@ -3,6 +3,7 @@
 @import 'style-icon';
 @import 'reset';
 @import '../../../node_modules/simplebar/dist/simplebar.min';
+@import '../../../node_modules/bxslider/dist/jquery.bxslider';
 
 /*
 Table of content
@@ -326,12 +327,14 @@ i {
 /*------------ Top live prices -------------*/
 .top-live-prices {
   .currency-list-wrapper {
-    display: flex;
-    flex-wrap: wrap;
+    //display: flex;
+    //flex-wrap: wrap;
+    height: 70px;
     &__item {
       text-align: left;
       color: $text-color;
-      flex: 1 0 auto;
+      //flex: 0 0 182px;
+      width: 182px;
       margin-bottom: 17px;
       .currency-name {
         font-size: 12px;
@@ -2642,15 +2645,15 @@ footer {
 /*------------ < 1200px -------------*/
 @media screen and (max-width: 1200px) {
   /*Top live prices*/
-  .top-live-prices {
-    .currency-list-wrapper {
-      &__item {
-        &:last-child {
-          padding-left: 33px;
-        }
-      }
-    }
-  }
+  //.top-live-prices {
+  //  .currency-list-wrapper {
+  //    &__item {
+  //      &:last-child {
+  //        padding-left: 33px;
+  //      }
+  //    }
+  //  }
+  //}
 
   /*header*/
   .header {
@@ -2679,16 +2682,16 @@ footer {
 /*------------ < 992px -------------*/
 @media screen and (max-width: 992px) {
   /*Top live prices*/
-  .top-live-prices {
-    .currency-list-wrapper {
-      &__item {
-        &:last-child {
-          flex: 0 0 auto;
-          padding-right: 45px;
-        }
-      }
-    }
-  }
+  //.top-live-prices {
+  //  .currency-list-wrapper {
+  //    &__item {
+  //      &:last-child {
+  //        flex: 0 0 auto;
+  //        padding-right: 45px;
+  //      }
+  //    }
+  //  }
+  //}
 
   /*header*/
   .header {
@@ -2748,19 +2751,19 @@ footer {
 /*------------ <768px -------------*/
 @media only screen and (max-width: 768px) {
   /*Top live prices*/
-  .top-live-prices {
-    .currency-list-wrapper {
-      &__item {
-        &:first-child {
-          padding-right: 33px;
-        }
-
-        &:last-child {
-          flex: 1 0 auto;
-        }
-      }
-    }
-  }
+  //.top-live-prices {
+  //  .currency-list-wrapper {
+  //    &__item {
+  //      &:first-child {
+  //        padding-right: 33px;
+  //      }
+  //
+  //      &:last-child {
+  //        flex: 1 0 auto;
+  //      }
+  //    }
+  //  }
+  //}
 
   /*Comments and posts*/
   .comments {

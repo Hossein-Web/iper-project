@@ -18,6 +18,21 @@ $(window).on('load', () => {
 	}, 2000);
 	AOS.init();
 });
+
+$('.currency-list-wrapper').bxSlider({
+    pager: false,
+    slideMargin: 30,
+    controls: false,
+    speed: 60000,
+    useCSS: false,
+    ticker: true,
+    tickerHover: true,
+    slideWidth: 300,
+    responsive: false,
+    minSlides: 1,
+    maxSlides: 4,
+});
+
 tabInit();
 
 //mobile menu
