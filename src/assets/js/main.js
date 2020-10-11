@@ -37,6 +37,7 @@ $( '.search>span' ).on( 'click', function () {
 // Header bottom slider
 let latest_news_articles = new Swiper( '.latest-news-articles__slider> .swiper-container', {
 	direction: 'vertical',
+	loop: true,
 	autoplay: {
 		delay: 3000
 	},
@@ -54,13 +55,23 @@ let post_slider_slider = new Swiper( '.post-slider__slider> .swiper-container', 
 
 // Tile post
 let tile_post = new Swiper( '.tile-post .swiper-container',{
-	spaceBetween: 20,
+	 spaceBetween: 5,
 	loop: true,
-	slidesPerView: 1,
+	slidesPerView: 1.2,
 	speed: 1000,
 	autoplay: {
 		delay: 3000
+	},
+	breakpoints: {
+		577: {
+			spaceBetween: 20
+		},
+		992: {
+			slidesPerView: 2,
+			spaceBetween: 20
+		}
 	}
+
 } );
 
 //comments section scroll
@@ -87,16 +98,16 @@ var mySwiper = new Swiper('.slider-post-small-slider .swiper-container', {
 //services slider
 var services =  new Swiper( '.services-slider__wrapper .swiper-container', {
 	speed: 400,
-	spaceBetween: 30,
-	slidesPerView: 1,
+	spaceBetween: 10,
+	slidesPerView: 1.8,
 	pagination: {
 		el: '.swiper-pagination',
 		type: 'bullets',
 		clickable: true
 	},
 	breakpoints: {
-		576: {
-			slidesPerView: 2,
+		577: {
+			spaceBetween: 30,
 		},
 		768: {
 			slidesPerView: 2.5,
@@ -113,6 +124,31 @@ $( '.tab-title > div' ).on( 'click', function () {
 	let tab_content = $( this ).data( 'tab' );
 	$( 'div[data-tabc =' + tab_content + ']' ).toggleClass( 'active' );
 } );
+
+//Suggest bourse slider
+let suggest_bourse = new Swiper( '.suggest-bourse .swiper-container',{
+	spaceBetween: 10,
+	loop: true,
+	slidesPerView: 2.1,
+	speed: 1000,
+	autoplay: {
+		delay: 3000
+	},
+	breakpoints: {
+		577: {
+			slidesPerView: 3.1,
+			spaceBetween: 20,
+		},
+		992: {
+			slidesPerView: 4.2
+		},
+		1200: {
+			slidesPerView: 6
+		}
+	}
+
+} );
+
 // Social media hover events
 $( '.footer-social-media li' ).on( 'mouseover', function (e) {
 	$(this).addClass('active');
