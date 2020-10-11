@@ -1299,6 +1299,11 @@ i {
           background-color: white;
 
           a {
+            &:hover{
+              h5{
+                color: $accent-color;
+              }
+            }
             h5 {
               color: $text-color-2;
               font-size: 20px;
@@ -2923,6 +2928,61 @@ footer {
   .live-prices{
     &__item{
       margin-top: 10px;
+    }
+  }
+
+  /*Post Slider*/
+  .post-slider{
+    &__slider{
+      .swiper-slide{
+        margin-bottom: 100px;
+        .post-slider-details{
+          bottom: -20px;
+          &__content{
+            left: 74px;
+            height: 45px;
+            a{
+              h5{
+                font-size: 13px;
+                margin-bottom: 6px;
+              }
+            }
+            .post-slider-title{
+              right: 10px;
+              top: 8px;
+            }
+          }
+          &__back{
+            bottom: -10px;
+            span{
+              font-size: 50px;
+            }
+          }
+        }
+        .study-time{
+          height: 80px;
+          width: 40px;
+          left: 18px;
+          bottom: 13px;
+          span{
+            font-size: 14px;
+            &:last-child{
+              font-size: 13px;
+            }
+          }
+        }
+      }
+    }
+    .post-slider-navigation{
+      justify-content: flex-start;
+      right: 0;
+      left: 0;
+      bottom: 0;
+     .navigation-button{
+       height: 45px;
+       width: 45px;
+       border-radius: 45px;
+     }
     }
   }
 
