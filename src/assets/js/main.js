@@ -109,7 +109,6 @@ var services =  new Swiper( '.services-slider__wrapper .swiper-container', {
 
 //Mega menu
 $( '.tab-title > div' ).on( 'click', function () {
-	console.log(  );
 	let tab_content = $( this ).data( 'tab' );
 	$( 'div[data-tabc =' + tab_content + ']' ).toggleClass( 'active' );
 } );
