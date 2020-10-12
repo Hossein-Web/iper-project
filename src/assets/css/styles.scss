@@ -821,6 +821,8 @@ i {
     }
 
     &__slider {
+      max-width: 344px;
+      height: 50px;
       .swiper-container {
         max-height: 60px;
 
@@ -909,6 +911,7 @@ i {
           top: 0;
           min-width: 100%;
           min-height: 100%;
+          max-width: initial;
           right: 50%;
           transform: translateX(50%);
         }
@@ -1047,7 +1050,9 @@ i {
         border-top-left-radius: 5px;
         position: relative;
         display: inline-block;
-
+        a{
+          display: block;
+        }
         .post-details {
           position: absolute;
           left: 0;
@@ -1145,7 +1150,20 @@ i {
         align-items: center;
         margin-bottom: 12px;
         position: relative;
-
+        .post-image{
+          overflow: hidden;
+          &:hover{
+            img{
+              transform: scale( 1.2 );
+            }
+          }
+          a{
+            display: block;
+            img{
+              transition: 0.3s;
+            }
+          }
+        }
         &::after {
           content: '';
           position: absolute;
@@ -1773,8 +1791,16 @@ i {
     text-align: center;
     overflow: hidden;
     max-height: 205px;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    &:hover{
+      img{
+        transform: scale(1.2);
+      }
+    }
     img{
       width: 100%;
+      transition: 0.3s;
     }
   }
   &__content {
@@ -2175,10 +2201,15 @@ i {
       background-color: #f6f8fb;
       background-image: radial-gradient(circle 105px at center, $background-color 0%, white 100%);
       margin-bottom: 29px;
-      padding: 34px 35px 32px 44px;
       border-radius: 50%;
       width: 140px;
       height: 140px;
+      img{
+        position: absolute;
+        top: 50%;
+        right: 50%;
+        transform: translate(50%, -50%);
+      }
     }
 
     .services-content {
@@ -2800,12 +2831,22 @@ footer {
 
 /*------------ < 576px -------------*/
 @media only screen and (max-width: 576px) {
+  /*General*/
     .container{
     padding: 0 5px;
   }
   header{
     padding: 10px 0 !important;
   }
+
+  .post-slider-navigation{
+    .navigation-button{
+      &::before{
+        font-size: 13px;
+      }
+    }
+  }
+
   /*Bourse title*/
   .bourse-title{
     margin-top: 20px;
@@ -2959,32 +3000,81 @@ footer {
         }
       }
       &--small{
-        padding: 10px 5px 0;
+        padding: 13px 5px 0;
         .post-content-image-wrapper {
           flex-direction: column;
+          &::after{
+            bottom: -12px;
+          }
+          .post-image{
+            margin-bottom: 5px;
+          }
+          .post-content{
+            margin-right: 0;
+            .post-title{
+              margin-bottom: 3px;
+            }
+          }
         }
       }
     }
   }
   .last-post__suggestion {
+    &:hover{
+      .suggest-link{
+        left: 10px;
+      }
+    }
     flex-direction: column;
     .suggestion-icon{
       position: static;
       right: unset;
       top: unset;
     }
+    .suggestion-title{
+      p{
+        margin-bottom: 10px;
+      }
+    }
+    .suggestion-content{
+      p{
+        margin-bottom: 10px;
+      }
+    }
+    .suggest-link{
+      transition: 0.2s;
+      i{
+        font-size: 30px;
+      }
+    }
   }
 
   /*Side populars*/
   .side-populars{
-    .post-details{
-      a{
-        h6{
-          font-size: 15px !important;
+    padding-top: 10px;
+    .title{
+      margin-bottom: 10px;
+    }
+    &__items-wrapper{
+      li{
+        align-items: center;
+        &:not( :last-child ){
+          margin-bottom: 10px !important;
         }
-      }
-      p{
-        font-size: 12px !important;
+        &:last-child{
+          padding-bottom: 15px;
+        }
+        .post-details{
+          padding-bottom: 0;
+          a{
+            h6{
+              font-size: 15px !important;
+            }
+          }
+          p{
+            font-size: 12px !important;
+          }
+        }
       }
     }
   }
@@ -3001,6 +3091,7 @@ footer {
         padding-bottom: 10px;
       }
       .post-meta{
+        padding-top: 10px;
         span, a{
           font-size: 12px;
         }
@@ -3042,6 +3133,10 @@ footer {
   /*Post Slider*/
   .post-slider{
     &__slider{
+      .post-slider-navigation{
+        justify-content: center !important;
+
+      }
       .swiper-slide{
         margin-bottom: 100px;
         .post-slider-details{
@@ -3105,7 +3200,7 @@ footer {
     &__tab-content{
       ul{
         li{
-          padding-top: 20px;
+          padding-top: 10px;
           p{
             padding: 5px 0;
           }
@@ -3121,9 +3216,15 @@ footer {
 
   /*Side video*/
   .side-video{
+    &__title{
+      margin-bottom: 20px;
+    }
     margin-bottom: 10px;
-    padding: 10px 5px 0 5px;
+    padding: 15px 5px 0 5px;
     &__content{
+      .poster-wrapper{
+        margin-bottom: 10px;
+      }
       .video-post-title{
         margin-bottom: 10px;
         a{
@@ -3132,7 +3233,7 @@ footer {
       }
       .video-post-meta{
         li{
-          margin-bottom: 5px;
+          margin-bottom: 10px;
           span, a{
             font-size: 12px;
           }
@@ -3145,8 +3246,12 @@ footer {
   .services-slider{
     .services-container{
       margin-bottom: 10px !important;
+      .services-image{
+        width: 120px;
+        height: 120px;
+      }
       .services-content{
-        padding: 80px 5px 5px;
+        padding: 70px 5px 10px;
         .services-title{
           margin-bottom: 10px;
           h4{

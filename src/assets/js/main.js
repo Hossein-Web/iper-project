@@ -51,7 +51,7 @@ $( '.search>span' ).on( 'click', function () {
 
 // Header bottom slider
 let latest_news_articles = new Swiper( '.latest-news-articles__slider> .swiper-container', {
-	direction: 'vertical',
+	// direction: 'vertical',
 	loop: true,
 	autoplay: {
 		delay: 3000
