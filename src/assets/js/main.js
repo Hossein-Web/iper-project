@@ -36,17 +36,51 @@ $('.currency-list-wrapper').bxSlider({
 tabInit();
 
 //mobile menu
-$('.mobile-menu-button').on('click', function () {
-	$('.header__mobile-menu-wrapper').addClass('mobile-menu-open');
-});
-$('.mobile-close-button').on('click', function () {
-	if ($('.header__mobile-menu-wrapper').hasClass('mobile-menu-open')) {
-		$('.header__mobile-menu-wrapper').removeClass('mobile-menu-open');
+let body = $( 'body' );
+let mobileWrapper = $('.header__mobile-menu-wrapper');
+let mainPage = $('#main-page' );
+let mobileOverlay = $( '#mobile-overlay' );
+
+function mobileClose(){
+	if ( mobileWrapper.hasClass('mobile-menu-open') ) {
+		mobileWrapper.removeClass('mobile-menu-open');
+
+		if ( mainPage.hasClass('menu-translate') ){
+			mainPage.removeClass('menu-translate');
+		}
+		body.removeClass( 'mobile-menu-active' );
+		mobileOverlay.css( 'display', 'none' );
 	}
+}
+
+function mobileOpen(){
+	mobileWrapper.addClass('mobile-menu-open');
+	mainPage.addClass('menu-translate');
+	body.addClass( 'mobile-menu-active' );
+	mobileOverlay.css( 'display', 'block' );
+}
+
+$('.mobile-menu-button').on('click', function(e) {
+	e.preventDefault();
+	mobileOpen();
+});
+
+$('#mobile-overlay').on( 'click', function(e) {
+	e.preventDefault();
+	mobileClose();
+} );
+
+$('.mobile-close-button').on('click', function(e) {
+	e.preventDefault();
+	mobileClose();
 } );
 
 $( '.search>span' ).on( 'click', function () {
 	$( '.search__form' ).toggleClass( 'search-open' );
+} );
+
+$( '.notification span' ).on( 'click', function () {
+	$( '.notification__notification-list' ).toggleClass( 'active' );
 } );
 
 // Header bottom slider
@@ -89,6 +123,21 @@ let tile_post = new Swiper( '.tile-post .swiper-container',{
 
 } );
 
+//offer posts
+var mySwiper = new Swiper('.offer-posts__slider-container > .swiper-container ', {
+	speed: 400,
+	spaceBetween: 20,
+	slidesPerView: 1.2,
+	breakpoints: {
+		768:{
+			slidesPerView: 2.5
+		},
+		992: {
+			slidesPerView: 4,
+			spaceBetween: 20
+		}
+	}
+});
 //comments section scroll
 if ( $('.comments__wrapper').length ){
 	new SimpleBar( $('.comments__wrapper')[0], {
@@ -111,7 +160,7 @@ var mySwiper = new Swiper('.slider-post-small-slider .swiper-container', {
 });
 
 //services slider
-var services =  new Swiper( '.services-slider__wrapper .swiper-container', {
+var services =  new Swiper( '.services-slider__slider-container .swiper-container', {
 	speed: 400,
 	spaceBetween: 10,
 	slidesPerView: 1.8,
