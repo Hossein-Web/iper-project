@@ -68,14 +68,15 @@ const pluginsProd = [
 Header & Footer JavaScript Boundles
 -------------------------------------------------------------------------------------------------- */
 const headerJS = [
+	'./node_modules/jquery/dist/jquery.js',
+	'./node_modules/swiper/swiper-bundle.js',
 	'./node_modules/aos/dist/aos.js',
 	'./node_modules/simplebar/dist/simplebar.min.js',
+	'./node_modules/bxslider/dist/jquery.bxslider.js',
     './src/assets/js/tabs.js'
 ];
 const footerJS = [
 	'./node_modules/webfontloader/webfontloader.js',
-	'./node_modules/jquery/dist/jquery.js',
-	'./node_modules/swiper/swiper-bundle.js',
 	'./src/assets/js/**',
 ];
 
