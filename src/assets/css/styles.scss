@@ -2289,6 +2289,10 @@ i {
   }
 
   .slider-post-small {
+    img{
+      width: 100%;
+      border-radius: 10px;
+    }
     &__content {
       margin-top: 18px;
 
@@ -2299,6 +2303,12 @@ i {
           font-size: 18px;
           font-weight: 700;
           line-height: 30px;
+          a{
+            transition: 0.3s;
+            &:hover{
+              color: $accent-color;
+            }
+          }
         }
       }
     }
@@ -2307,7 +2317,16 @@ i {
       ul {
         li {
           padding-left: 18px;
-
+          a{
+            span{
+              transition: 0.3s;
+            }
+            &:hover{
+              span{
+                color: $accent-color;
+              }
+            }
+          }
           span {
             color: $text-color-2;
             font-size: 14px;
@@ -2530,8 +2549,9 @@ footer {
 
     ul {
       li {
-        margin-bottom: 14px;
-
+        &:not( :last-child) {
+          margin-bottom: 14px;
+        }
         a {
           color: $text-color-2;
           font-size: 14px;
@@ -3249,10 +3269,10 @@ footer {
     margin-bottom: 10px;
 
     h6 {
-      font-size: 15px;
+      font-size: 14px;
 
       span {
-        font-size: 15px;
+        font-size: 14px;
       }
     }
   }
@@ -3462,7 +3482,7 @@ footer {
     .suggest-link{
       transition: 0.2s;
       i{
-        font-size: 30px;
+        font-size: 20px;
       }
     }
   }
@@ -3533,6 +3553,7 @@ footer {
 
   /*Comments and posts*/
   .comments-and-posts {
+    margin-bottom: 10px;
     .comments__wrapper {
       .comment-content {
         padding-top: 15px;
@@ -3565,7 +3586,6 @@ footer {
           }
         }
       }
-      .slider-post-small{
        &__post-meta{
          ul{
            li{
@@ -3575,7 +3595,6 @@ footer {
            }
          }
        }
-      }
       &__content{
         .post-small-title{
           p{
@@ -3597,13 +3616,15 @@ footer {
   .post-slider{
     margin-bottom: 10px;
     &__slider{
+      padding-bottom: 10px;
       .post-slider-navigation{
         justify-content: center !important;
         right: 0;
         left: 0;
+        padding-top: 10px;
       }
       .swiper-slide{
-        margin-bottom: 70px;
+        margin-bottom: 63px;
         .post-slider-details{
           bottom: -20px;
 
