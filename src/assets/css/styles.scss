@@ -2088,7 +2088,6 @@ i {
       }
     }
   }
-
   &__item {
     position: relative;
     display: inline-block;
@@ -2386,7 +2385,7 @@ i {
   margin-bottom: 50px;
   position: relative;
 
-  &__wrapper {
+  &__slider-container {
     position: relative;
 
     .swiper-pagination {
@@ -3106,6 +3105,26 @@ footer {
     }
   }
 
+  .services-slider , .suggest-bourse, .offer-posts{
+    &__slider-container{
+      position: relative;
+      &::before{
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        height: 100%;
+        width: 30px;
+        z-index: 10;
+        background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.9) 10%, rgba(255, 255, 255, 0.3) 100%);
+        box-shadow: 4px 0 25px 4px rgba(255, 255, 255, 0.448);
+
+      }
+    }
+  }
+
   /*Bourse title*/
   .bourse-title {
     margin-top: 20px;
@@ -3336,7 +3355,6 @@ footer {
             font-size: 12px !important;
           }
         }
-//>>>>>>> 3d735bd1ecd14d3be51447f033cc94bea706e451
       }
     }
   }
@@ -3370,7 +3388,6 @@ footer {
     margin-top: 10px;
     padding-top: 10px;
     padding-bottom: 10px;
-
     &__item {
       margin-bottom: 10px;
     }
@@ -3529,6 +3546,21 @@ footer {
 
   /*Services slider*/
   .services-slider {
+    &__slider-container{
+      &::before{
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        height: 100%;
+        width: 30px;
+        z-index: 10;
+        background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.9) 10%, rgba(255, 255, 255, 0.3) 100%);
+        box-shadow: 4px 0 25px 4px rgba(255, 255, 255, 0.448);
+      }
+    }
     .services-container {
       margin-bottom: 10px !important;
       .services-image{

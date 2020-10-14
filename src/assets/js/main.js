@@ -123,6 +123,21 @@ let tile_post = new Swiper( '.tile-post .swiper-container',{
 
 } );
 
+//offer posts
+var mySwiper = new Swiper('.offer-posts__slider-container > .swiper-container ', {
+	speed: 400,
+	spaceBetween: 20,
+	slidesPerView: 1.2,
+	breakpoints: {
+		768:{
+			slidesPerView: 2.5
+		},
+		992: {
+			slidesPerView: 4,
+			spaceBetween: 20
+		}
+	}
+});
 //comments section scroll
 if ( $('.comments__wrapper').length ){
 	new SimpleBar( $('.comments__wrapper')[0], {
@@ -145,7 +160,7 @@ var mySwiper = new Swiper('.slider-post-small-slider .swiper-container', {
 });
 
 //services slider
-var services =  new Swiper( '.services-slider__wrapper .swiper-container', {
+var services =  new Swiper( '.services-slider__slider-container .swiper-container', {
 	speed: 400,
 	spaceBetween: 10,
 	slidesPerView: 1.8,
