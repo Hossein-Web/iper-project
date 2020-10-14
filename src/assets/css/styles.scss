@@ -922,7 +922,7 @@ i {
             visibility: hidden;
             opacity: 0;
             transition: 0.3s;
-            box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.1);
+            //box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.1);
             max-height: 0;
             overflow: hidden;
             text-align: right;
@@ -930,13 +930,21 @@ i {
             &.active {
               opacity: 1;
               visibility: visible;
-              max-height: 200px;
-              padding: 10px;
+              max-height: 300px;
+              padding: 0 10px;
             }
 
             li {
+              transition: 0.3s;
               padding-bottom: 10px;
-              border-top: 1px solid $background-color-2;
+              padding-top: 8px;
+              &:not( :first-child ){
+                border-top: 1px solid $background-color-2;
+              }
+              &:hover{
+                color: $accent-color;
+                padding-right: 12px;
+              }
             }
           }
         }
@@ -2100,16 +2108,17 @@ i {
     bottom: 0;
     background-color: $background-color;
   }
-
-  .container {
-    padding-right: 30px;
-    padding-left: 30px;
-
     .bourse-title {
+      margin-left: 24px;
+      margin-right: 24px;
       h6, a {
         background-color: $background-color;
       }
     }
+  &__slider-container{
+    text-align: center;
+    margin-left: 24px;
+    margin-right: 24px;
   }
   &__item {
     position: relative;
@@ -3114,14 +3123,6 @@ footer {
       width: 90%;
     }
   }
-
-  /*Offer posts*/
-  .offer-posts {
-    &__item {
-      margin-bottom: 20px;
-    }
-  }
-
   /*Footer bottom*/
   .footer-bottom {
     .footer-social-media {
@@ -3151,16 +3152,6 @@ footer {
   /*Comments and posts*/
   .comments {
     margin-bottom: 20px;
-  }
-
-  /*offer-posts*/
-  .offer-posts {
-    &__item {
-      display: block;
-      width: 265px;
-      margin-left: auto;
-      margin-right: auto;
-    }
   }
 
   /*Post slider*/
@@ -3546,8 +3537,10 @@ footer {
     margin-top: 10px;
     padding-top: 10px;
     padding-bottom: 10px;
-    &__item {
-      margin-bottom: 10px;
+    &__slider-container{
+      text-align: center;
+      margin-left: 0;
+      margin-right: 0;
     }
   }
 
