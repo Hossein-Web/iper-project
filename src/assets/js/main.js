@@ -130,7 +130,9 @@ var mySwiper = new Swiper('.offer-posts__slider-container > .swiper-container ',
 	slidesPerView: 1.2,
 	breakpoints: {
 		576:{
-		slidesPerView:1.8
+			slidesPerView:1.8,
+			spaceBetween: 10
+
 		},
 		768:{
 			slidesPerView: 2.5
