@@ -456,6 +456,7 @@ i {
 
       li {
         padding-left: 35px;
+        transition: 0.3s;
 
         &:hover {
           color: $accent-color;
@@ -998,7 +999,7 @@ i {
 /*------------ Header bottom-------------*/
 .header-bottom {
   padding-top: 21px;
-  margin-bottom: 8px;
+  margin-bottom: 46px;
 
   .latest-news-articles {
     display: flex;
@@ -1013,16 +1014,20 @@ i {
     }
 
     &__slider {
-      max-width: 344px;
-      height: 50px;
+      max-width: calc(100% - 136px);
       .swiper-container {
         max-height: 60px;
-
         .swiper-slide {
           color: $text-color-2;
           font-size: 16px;
           font-weight: 500;
           background-color: white;
+          a{
+            transition: 0.3s;
+            &:hover{
+              color: $accent-color;
+            }
+          }
         }
       }
     }
@@ -1037,6 +1042,10 @@ i {
         color: $text-color;
         font-size: 12px;
         font-weight: 400;
+        transition: 0.3s;
+        &:hover{
+          color: $accent-color;
+        }
       }
 
       &:not( :last-child ) {
@@ -1243,7 +1252,7 @@ i {
     }
 
     .post-meta-image-wrapper {
-      margin-bottom: 15px;
+      margin-bottom: 26px;
       position: relative;
       &::before{
         content: '';
@@ -1557,6 +1566,7 @@ i {
               font-size: 20px;
               font-weight: 700;
               margin-bottom: 10px;
+              transition: 0.3s;
             }
 
             span {
@@ -3173,11 +3183,24 @@ footer {
 /*------------ < 576px -------------*/
 @media only screen and (max-width: 576px) {
   /*General*/
-    .container{
+  .container{
     padding: 0 5px;
   }
-  header {
+  .header {
     padding: 10px 0 !important;
+    &__logo{
+      margin-bottom: 5px;
+    }
+    &__menu-user-links-wrapper{
+      .user-links{
+        .where-button{
+          a{
+            font-size: 13px;
+            padding: 10px 15px;
+          }
+        }
+      }
+    }
   }
 
   /*Last post*/
@@ -3242,27 +3265,19 @@ footer {
     }
   }
 
-  /*header*/
-  .header {
-    &__logo {
-      margin-bottom: 40px;
-    }
-  }
-
   /*Header bottom*/
   .header-bottom {
     padding-top: 10px;
-
+    margin-bottom: 10px;
     .latest-news-articles {
       flex-wrap: wrap;
 
       &__title {
-        margin-bottom: 10px;
+        margin-bottom: 5px;
       }
 
       &__slider {
-        margin-bottom: 10px;
-
+        max-width: 100%;
         .swiper-container {
           max-height: unset !important;
 
@@ -3485,7 +3500,7 @@ footer {
     margin-bottom: 10px;
     .comments__wrapper {
       .comment-content {
-        padding-top: 15px;
+        padding-top: 5px;
         padding-right: 5px;
 
         p {
@@ -3702,6 +3717,27 @@ footer {
     margin-bottom: 10px;
   }
 
+  /*Suggest bourse*/
+  .suggest-bourse{
+    &__item-wrapper{
+      .suggest-bourse-details{
+        p{
+          text-align: left;
+          padding-left: 5px;
+        }
+      }
+      .suggest-bourse-read-more{
+        bottom: 12px;
+        background-color: initial;
+        text-align: right;
+        padding-right: 5px;
+        a{
+          font-size: 12px;
+        }
+      }
+    }
+  }
+
   /*Footer*/
   footer {
     padding-bottom: 0;
@@ -3714,12 +3750,29 @@ footer {
   /*Footer bottom*/
   .footer-bottom {
     padding: 15px 0;
-
+    .footer-copy-right{
+      flex-wrap: wrap;
+      div{
+        flex: 1 0 auto;
+        &:first-child{
+          text-align: center;
+          a{
+            display: inline-block;
+          }
+        }
+      }
+      .copy-right-text-wrapper{
+        flex: 1 1 auto;
+        text-align: justify;
+        margin: 0;
+      }
+    }
     .footer-social-media {
       margin-top: 15px;
 
       li {
         margin-bottom: 5px !important;
+        max-height: 25px;
       }
     }
   }

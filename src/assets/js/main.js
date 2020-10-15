@@ -86,12 +86,12 @@ $( '.notification span' ).on( 'click', function () {
 // Header bottom slider
 let latest_news_articles = new Swiper( '.latest-news-articles__slider> .swiper-container', {
 	// direction: 'vertical',
+	slidesPerView: 1,
 	loop: true,
 	autoplay: {
 		delay: 3000
 	},
 	effect: 'fade',
-	autoHeight: true
 } );
 
 // Post-slider slider
