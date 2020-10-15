@@ -1245,63 +1245,26 @@ i {
     .post-meta-image-wrapper {
       margin-bottom: 15px;
       position: relative;
-      .post-details {
-        justify-content: space-between;
+      &::before{
+        content: '';
+        display: block;
         position: absolute;
-        bottom: 0;
+        background-color: white;
         right: 0;
-        left: 0;
-        flex-wrap: wrap;
-        padding-right: 25px;
-        .post-meta {
-          //position: absolute;
-          //direction: rtl;
-          //background-color: white;
-          //height: 52px;
-          //z-index: 2;
-          //left: 130px;
-          //right: 0;
-          //bottom: 0;
-          z-index: 1;
-          padding-top: 16px;
-          flex: 1 0 auto;
-          a, span {
-            line-height: 30px;
-            font-size: 14px;
-            font-weight: 500;
-          }
-          i{
-            color: $icon-color;
-          }
-        }
-
-        .meta-background {
-          //direction: ltr;
-          //position: absolute;
-          //bottom: -5px;
-          //left: 0;
-          &::before, &::after{
-            content: '';
-            display: block;
-            position: absolute;
-            background-color: white;
-            right: 0;
-            bottom: 0;
-          }
-          &::before{
-            height: 100%;
-            left: 130px;
-          }
-          &::after{
-            height: 10px;
-            width: 100%;
-          }
-          span{
-            font-size: 52px;
-            color: white;
-            height: 100%;
-            display: block
-          }
+        bottom: 0;
+        height: 52px;
+        left: 130px;
+        z-index: 2;
+      }
+      .meta-background {
+        position: absolute;
+        left: -1px;
+        bottom: -1px;
+        span{
+          font-size: 53px;
+          color: white;
+          height: 100%;
+          display: block
         }
       }
       .post-study-time {
@@ -1331,8 +1294,6 @@ i {
       .post-image {
         border-top-right-radius: 5px;
         border-top-left-radius: 5px;
-        //position: relative;
-        //display: inline-block;
         a{
           display: block;
           img{
@@ -1341,7 +1302,23 @@ i {
         }
       }
     }
-
+    .post-meta {
+      &--large{
+        margin-bottom: 32px;
+        margin-top: -50px;
+        z-index: 5;
+        position: relative;
+        padding-right: 16px;
+        a, span {
+          line-height: 30px;
+          font-size: 14px;
+          font-weight: 500;
+        }
+        i{
+          color: $icon-color;
+        }
+      }
+    }
     .post-content {
       padding-right: 25px;
       .post-title {
@@ -3025,29 +3002,6 @@ footer {
   .last-post{
     &__item{
       padding-bottom: 10px;
-      .post-meta-image-wrapper{
-        margin-bottom: 10px;
-        .post-details{
-          flex-direction: column-reverse;
-          padding-right: 5px;
-          .post-meta{
-            padding-top: 0;
-            flex-basis: 0;
-          }
-          .meta-background{
-            &::after{
-              height: 50px;
-            }
-            text-align: left;
-            span{
-              display: inline-block;
-            }
-          }
-        }
-        .post-study-time{
-          bottom: 58px;
-        }
-      }
       .post-content{
         padding-right: 5px;
       }
@@ -3375,50 +3329,13 @@ footer {
       }
 
       .post-meta-image-wrapper {
-        .post-image {
-          .post-study-time {
-            height: 80px;
-            width: 40px;
-
-            span {
-              font-size: 14px;
-
-              &:last-child {
-                font-size: 13px;
-              }
-            }
-          }
-        }
-        .post-details{
-          //flex-direction: column-reverse !important;
-          .post-meta{
-            height: 46px;
-            left: 88px;
-            ul{
-              li{
-                span{
-                  font-size: 13px;
-                }
-              }
-            }
-          }
-          .meta-background{
-            //text-align: left;
-            &::before{
-              left: 90px;
-            }
-            &::after{
-              height: 40px;
-            }
-            span{
-              //display: inline-block;
-              font-size: 38px;
-            }
-          }
+        &::before{
+          height: 36px;
+          left: 95px;
         }
         .post-study-time{
-          left: 30px;
-          bottom: 52px;
+          left: 28px;
+          bottom: 17px;
           width: 40px;
           height: 80px;
           span{
@@ -3429,6 +3346,21 @@ footer {
               font-size: 13px;
             }
           }
+        }
+        .meta-background{
+          span{
+            font-size: 37px;
+          }
+        }
+      }
+      .post-meta{
+        &--large{
+          margin-top: -40px;
+          margin-bottom: 3px;
+          padding-right: 3px;
+        }
+        span{
+          font-size: 12px;
         }
       }
       &--small{
