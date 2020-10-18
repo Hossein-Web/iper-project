@@ -355,15 +355,12 @@ i {
 
 /*------------ Top live prices -------------*/
 .top-live-prices {
+  direction: ltr;
   .currency-list-wrapper {
-    //display: flex;
-    //flex-wrap: wrap;
     height: 70px;
     &__item {
       text-align: left;
       color: $text-color;
-      //flex: 0 0 182px;
-      width: 182px;
       margin-bottom: 17px;
 
       .currency-name {
@@ -417,14 +414,6 @@ i {
           }
 
         }
-      }
-
-      &:not( :first-child ) {
-        padding-right: 33px;
-      }
-
-      &:not( :last-child ) {
-        padding-left: 33px;
       }
     }
   }
@@ -2986,16 +2975,6 @@ footer {
 
 /*------------ < 1200px -------------*/
 @media screen and (max-width: 1200px) {
-  /*Top live prices*/
-  //.top-live-prices {
-  //  .currency-list-wrapper {
-  //    &__item {
-  //      &:last-child {
-  //        padding-left: 33px;
-  //      }
-  //    }
-  //  }
-  //}
 
   /*header*/
   .header {
@@ -3036,18 +3015,6 @@ footer {
 
 /*------------ < 992px -------------*/
 @media screen and (max-width: 992px) {
-  /*Top live prices*/
-  //.top-live-prices {
-  //  .currency-list-wrapper {
-  //    &__item {
-  //      &:last-child {
-  //        flex: 0 0 auto;
-  //        padding-right: 45px;
-  //      }
-  //    }
-  //  }
-  //}
-
   /*header*/
   .header {
     &__logo {
@@ -3103,20 +3070,6 @@ footer {
 
 /*------------ <768px -------------*/
 @media only screen and (max-width: 768px) {
-  /*Top live prices*/
-  //.top-live-prices {
-  //  .currency-list-wrapper {
-  //    &__item {
-  //      &:first-child {
-  //        padding-right: 33px;
-  //      }
-  //
-  //      &:last-child {
-  //        flex: 1 0 auto;
-  //      }
-  //    }
-  //  }
-  //}
 
   /*Comments and posts*/
   .comments {
@@ -3245,22 +3198,6 @@ footer {
 
       span {
         font-size: 14px;
-      }
-    }
-  }
-
-  /*Top live prices*/
-  .top-live-prices {
-    .currency-list-wrapper {
-      justify-content: center;
-
-      &__item {
-        flex: 0 0 auto !important;
-        padding: 0 33px !important;
-
-        &:last-child {
-          flex: 0 0 auto;
-        }
       }
     }
   }
@@ -3788,6 +3725,36 @@ footer {
 
       span {
         display: none;
+      }
+    }
+  }
+
+  /*Log sign page*/
+  .log-sign{
+    background-image: initial;
+    .log-sign-wrapper{
+      margin: 10px 0;
+      .form-submit{
+        flex-wrap: wrap;
+        justify-content: center;
+        >a, >p, >div{
+          flex: 1 0 100%;
+        }
+        >div{
+          text-align: center;
+        }
+        button{
+          margin-top: 10px;
+        }
+      }
+      .log-in{
+        &__form{
+          form{
+            max-width: initial;
+            margin-right: initial;
+            margin-left: initial;
+          }
+        }
       }
     }
   }
