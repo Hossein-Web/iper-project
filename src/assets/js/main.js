@@ -49,12 +49,11 @@ $('.currency-list-wrapper').bxSlider({
     useCSS: true,
     ticker: true,
     tickerHover: true,
-    slideWidth: 180,
+    slideWidth: 247,
     responsive: true,
     minSlides: 1,
     maxSlides: 5,
-    wrapperClass: 'currency-list-wrapper',
-    slideMargin: 65
+    wrapperClass: 'currency-list-wrapper'
 });
 
 tabInit();
