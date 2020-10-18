@@ -2832,6 +2832,7 @@ footer {
               color: $accent-color;
               padding-right: 16px;
               position: relative;
+              display: inline-block;
 
               &::before {
                 font-family: persian;
