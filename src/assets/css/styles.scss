@@ -2912,7 +2912,7 @@ footer {
   background-repeat: no-repeat;
   background-position: center -130px;
   background-size: contain;
-  margin-top: 350px;
+  //margin-top: 350px;
   position: relative;
 
   &__content-wrapper {
@@ -3716,15 +3716,35 @@ footer {
 
   /*404 page*/
   .not-found {
+    //margin-top: 30px;
+    .logo-content-wrapper{
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
     &__links {
       flex-direction: column;
 
       a {
-        margin-bottom: 20px;
+        margin-bottom: 10px;
+        font-size: 13px;
+        &:first-child{
+          margin-left: initial;
+        }
       }
 
       span {
         display: none;
+      }
+    }
+    &__content{
+      margin-right: 0;
+      h4{
+        font-size: 15px;
+        margin-bottom: 10px;
+      }
+      p{
+        font-size: 13px;
       }
     }
   }
@@ -3743,11 +3763,15 @@ footer {
         >div{
           text-align: center;
         }
+        >a{
+          text-align: right;
+        }
         button{
           margin-top: 10px;
         }
       }
       .log-in{
+        margin-left: 0;
         &__form{
           form{
             max-width: initial;
@@ -3755,6 +3779,9 @@ footer {
             margin-left: initial;
           }
         }
+      }
+      .sign-in, .log-in{
+        padding: 0 5px;
       }
     }
   }
