@@ -415,14 +415,6 @@ i {
 
         }
       }
-      //
-      //&:not( :first-child ) {
-      //  padding-right: 33px;
-      //}
-      //
-      //&:not( :last-child ) {
-      //  padding-left: 33px;
-      //}
     }
   }
 }
@@ -3733,6 +3725,36 @@ footer {
 
       span {
         display: none;
+      }
+    }
+  }
+
+  /*Log sign page*/
+  .log-sign{
+    background-image: initial;
+    .log-sign-wrapper{
+      margin: 10px 0;
+      .form-submit{
+        flex-wrap: wrap;
+        justify-content: center;
+        >a, >p, >div{
+          flex: 1 0 100%;
+        }
+        >div{
+          text-align: center;
+        }
+        button{
+          margin-top: 10px;
+        }
+      }
+      .log-in{
+        &__form{
+          form{
+            max-width: initial;
+            margin-right: initial;
+            margin-left: initial;
+          }
+        }
       }
     }
   }

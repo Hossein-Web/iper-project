@@ -10,22 +10,22 @@
                         </div><!-- .sign-in__title -->
                         <form class="sign-in__form" action="#">
                             <div class="row p24">
-                                <div class="col">
+                                <div class="col-md-12 col-sm-24 col-24">
                                     <div class="field-wrapper">
                                         <input class="sign-in-full-name" type="text" name="sign-in-full-name"
                                                placeholder="نام و نام خانوادگی">
                                         <i class="persian persian-user"></i>
                                         <i class="field-validation field-validation--valid persian persian-tick"></i>
                                     </div><!-- .field-wrapper -->
-                                </div><!-- .col -->
-                                <div class="col">
+                                </div><!-- .col-md-24 -->
+                                <div class="col-md-12 col-sm-24 col-24">
                                     <div class="field-wrapper">
                                         <input class="sign-in-phone" type="text" name="sign-in-phone"
                                                placeholder="تلفن همراه">
                                         <i class="persian persian-mobile"></i>
                                         <i class="field-validation field-validation--invalid persian persian-cross"></i>
                                     </div><!-- .field-wrapper -->
-                                </div><!-- .col -->
+                                </div><!-- .col-md-24 -->
                             </div><!-- .row -->
                             <div class="field-wrapper">
                                 <input class="sign-in-email" type="text" name="sign-in-email" placeholder="ایمیل">
@@ -33,25 +33,27 @@
                                 <i class="field-validation"></i>
                             </div><!-- .field-wrapper -->
                             <div class="row p24">
-                                <div class="col">
+                                <div class="col-md-12 col-sm-24 col-24">
                                     <div class="field-wrapper">
                                         <input class="sign-in-pass" type="text" name="sign-in-pass" placeholder="پسورد">
                                         <i class="persian persian-lock"></i>
                                         <i class="field-validation"></i>
                                     </div><!-- .field-wrapper -->
-                                </div><!-- .col -->
-                                <div class="col">
+                                </div><!-- .col-md-24 -->
+                                <div class="col-md-12 col-sm-24 col-24">
                                     <div class="field-wrapper">
                                         <input class="sign-in-pass-confirm" type="text" name="sign-in-pass-confirm"
                                                placeholder="تکرار پسورد">
                                         <i class="persian persian-lock"></i>
                                         <i class="field-validation"></i>
                                     </div><!-- .field-wrapper -->
-                                </div><!-- .col -->
+                                </div><!-- .col-md-24 -->
                             </div><!-- .row -->
                             <div class="form-submit">
                                 <p><a href="#">قوانین </a>سایت را خواندم و قبول میکنم</p>
-                                <button type="submit" name="sign-in-form-submit">ثبت نام <i class="persian persian-arrow-left"></i></button>
+                                <div>
+                                    <button type="submit" name="sign-in-form-submit">ثبت نام <i class="persian persian-arrow-left"></i></button>
+                                </div>
                             </div><!-- .form-submit -->
                         </form><!-- .sign-in__form -->
                     </div><!-- .sign-in -->
@@ -78,7 +80,9 @@
                                 </div>
                                 <div class="form-submit">
                                     <a class="forget-password" href="#">پسورد اکانت را فراموش کرده ام !</a>
-                                    <button name="submit" type="submit">ورود<i class="persian persian-arrow-left"></i></button>
+                                    <div>
+                                        <button name="submit" type="submit">ورود<i class="persian persian-arrow-left"></i></button>
+                                    </div>
                                 </div>
                             </form>
                         </div><!-- .log-in__content -->
