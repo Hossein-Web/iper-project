@@ -3052,7 +3052,7 @@ footer {
   background-repeat: no-repeat;
   background-position: center -130px;
   background-size: contain;
-  margin-top: 350px;
+  //margin-top: 350px;
   position: relative;
 
   &__content-wrapper {
@@ -3071,7 +3071,8 @@ footer {
   }
 
   &__content {
-    margin-right: -42px;
+    //margin-right: -42px;
+    margin-left: -42px;
     color: $icon-color-2;
 
     h4 {
@@ -3089,22 +3090,26 @@ footer {
   &__links {
     a {
       border-radius: 25px;
-      padding: 10px 20px 12px 15px;
+      //padding: 10px 20px 12px 15px;
+      padding: 10px 15px 12px 20px;
       background-color: $accent-color;
       color: white;
       font-size: 18px;
       font-weight: 500;
 
       &:first-child {
-        margin-left: -6px;
-      }
-
-      &:last-child {
+        //margin-left: -6px;
         margin-right: -6px;
       }
 
+      &:last-child {
+        //margin-right: -6px;
+        margin-left: -6px;
+      }
+
       i {
-        margin-left: 13px;
+        //margin-left: 13px;
+        margin-right: 13px;
         font-size: 15px;
       }
     }
@@ -3115,16 +3120,6 @@ footer {
 
 /*------------ < 1200px -------------*/
 @media screen and (max-width: 1200px) {
-  /*Top live prices*/
-  //.top-live-prices {
-  //  .currency-list-wrapper {
-  //    &__item {
-  //      &:last-child {
-  //        padding-left: 33px;
-  //      }
-  //    }
-  //  }
-  //}
 
   /*header*/
   .header {
@@ -3168,18 +3163,6 @@ footer {
 
 /*------------ < 992px -------------*/
 @media screen and (max-width: 992px) {
-  /*Top live prices*/
-  //.top-live-prices {
-  //  .currency-list-wrapper {
-  //    &__item {
-  //      &:last-child {
-  //        flex: 0 0 auto;
-  //        padding-right: 45px;
-  //      }
-  //    }
-  //  }
-  //}
-
   /*header*/
   .header {
     &__logo {
@@ -3236,20 +3219,6 @@ footer {
 
 /*------------ <768px -------------*/
 @media only screen and (max-width: 768px) {
-  /*Top live prices*/
-  //.top-live-prices {
-  //  .currency-list-wrapper {
-  //    &__item {
-  //      &:first-child {
-  //        padding-right: 33px;
-  //      }
-  //
-  //      &:last-child {
-  //        flex: 1 0 auto;
-  //      }
-  //    }
-  //  }
-  //}
 
   /*Comments and posts*/
   .comments {
@@ -3383,22 +3352,6 @@ footer {
 
       span {
         font-size: 14px;
-      }
-    }
-  }
-
-  /*Top live prices*/
-  .top-live-prices {
-    .currency-list-wrapper {
-      justify-content: center;
-
-      &__item {
-        flex: 0 0 auto !important;
-        padding: 0 33px !important;
-
-        &:last-child {
-          flex: 0 0 auto;
-        }
       }
     }
   }
@@ -3729,12 +3682,6 @@ footer {
                 margin-bottom: 6px;
               }
             }
-
-            //.post-slider-title {
-            //  //right: 10px;
-            //  left: 10px;
-            //  top: 8px;
-            //}
           }
         }
 
@@ -3825,22 +3772,22 @@ footer {
 
   /*Services slider*/
   .services-slider {
-    &__slider-container{
-      &::before{
-        content: '';
-        display: block;
-        position: absolute;
-        //left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        height: 100%;
-        width: 30px;
-        z-index: 10;
-        background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.9) 10%, rgba(255, 255, 255, 0.3) 100%);
-        box-shadow: 4px 0 25px 4px rgba(255, 255, 255, 0.448);
-      }
-    }
+    //&__slider-container{
+    //  &::before{
+    //    content: '';
+    //    display: block;
+    //    position: absolute;
+    //    //left: 0;
+    //    right: 0;
+    //    top: 0;
+    //    bottom: 0;
+    //    height: 100%;
+    //    width: 30px;
+    //    z-index: 10;
+    //    background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.9) 10%, rgba(255, 255, 255, 0.3) 100%);
+    //    box-shadow: 4px 0 25px 4px rgba(255, 255, 255, 0.448);
+    //  }
+    //}
     .services-container {
       margin-bottom: 10px !important;
       .services-image{
@@ -3933,15 +3880,74 @@ footer {
 
   /*404 page*/
   .not-found {
+    //margin-top: 30px;
+    .logo-content-wrapper{
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
     &__links {
       flex-direction: column;
 
       a {
-        margin-bottom: 20px;
+        margin-bottom: 10px;
+        font-size: 13px;
+        &:first-child{
+          //margin-left: initial;
+          margin-right: initial;
+        }
       }
 
       span {
         display: none;
+      }
+    }
+    &__content{
+      //margin-right: 0;
+      margin-left: 0;
+      h4{
+        font-size: 15px;
+        margin-bottom: 10px;
+      }
+      p{
+        font-size: 13px;
+      }
+    }
+  }
+
+  /*Log sign page*/
+  .log-sign{
+    background-image: initial;
+    .log-sign-wrapper{
+      margin: 10px 0;
+      .form-submit{
+        flex-wrap: wrap;
+        justify-content: center;
+        >a, >p, >div{
+          flex: 1 0 100%;
+        }
+        >div{
+          text-align: center;
+        }
+        >a{
+          text-align: right;
+        }
+        button{
+          margin-top: 10px;
+        }
+      }
+      .log-in{
+        margin-left: 0;
+        &__form{
+          form{
+            max-width: initial;
+            margin-right: initial;
+            margin-left: initial;
+          }
+        }
+      }
+      .sign-in, .log-in{
+        padding: 0 5px;
       }
     }
   }
