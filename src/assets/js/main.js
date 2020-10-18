@@ -19,18 +19,21 @@ $(window).on('load', () => {
 	AOS.init();
 });
 
+// Top live prices
 $('.currency-list-wrapper').bxSlider({
     pager: false,
-    slideMargin: 30,
+    // slideMargin: 30,
     controls: false,
     speed: 60000,
-    useCSS: false,
+    useCSS: true,
     ticker: true,
     tickerHover: true,
-    slideWidth: 300,
-    responsive: false,
+	slideWidth: 180,
+    responsive: true,
     minSlides: 1,
-    maxSlides: 4,
+    maxSlides: 5,
+	wrapperClass: 'currency-list-wrapper',
+	slideMargin: 65
 });
 
 tabInit();
