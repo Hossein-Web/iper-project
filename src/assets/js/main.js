@@ -76,12 +76,12 @@ if ( window.matchMedia("(max-width: 576px)").matches ) {
 }
 
 $(window).on( 'scroll', function (e) {
-     if ($(this).scrollTop()>70) {
+     if ($(this).scrollTop()>100) {
          topLivePricesSection.addClass( 'fixed-to-bottom' );
-         mainPage.css( 'padding-top', '70px' );
+         // mainPage.css( 'padding-top', '70px' );
      }else if ( topLivePricesSection.hasClass( 'fixed-to-bottom' ) ){
          topLivePricesSection.removeClass( 'fixed-to-bottom' );
-         mainPage.css( 'padding-top', '0' );
+         // mainPage.css( 'padding-top', '0' );
      }
 } );
 
