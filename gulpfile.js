@@ -132,23 +132,6 @@ function stylesDev() {
 		.pipe(browserSync.stream({ match: '**/*.css' }));
 }
 
-function stylesDev() {
-	// return src('./src/assets/css/styles.css')
-	// 	.pipe(plumber({ errorHandler: onError }))
-	// 	.pipe(sourcemaps.init())
-	// 	.pipe(postcss(pluginsDev))
-	// 	.pipe(sourcemaps.write('.'))
-	// 	.pipe(dest('./build/assets/css'))
-	// 	.pipe(browserSync.stream({ match: '**/*.css' }));
-
-	return src('./src/assets/css/styles.scss')
-		.pipe(sourcemaps.init())
-		.pipe(sass({includePaths: 'node_modules'}).on("error", sass.logError))
-		.pipe(sourcemaps.write('.'))
-		.pipe(dest('./build/assets/css'))
-		.pipe(browserSync.stream({ match: '**/*.css' }));
-}
-
 function stylesENDev() {
 	// return src('./src/assets/css/styles.css')
 	// 	.pipe(plumber({ errorHandler: onError }))
@@ -158,7 +141,7 @@ function stylesENDev() {
 	// 	.pipe(dest('./build/assets/css'))
 	// 	.pipe(browserSync.stream({ match: '**/*.css' }));
 
-	return src('./src/assets/css/styles-en.scss')
+	return src('./src/assets/css/styles-en-2.scss')
 		.pipe(sourcemaps.init())
 		.pipe(sass({includePaths: 'node_modules'}).on("error", sass.logError))
 		.pipe(sourcemaps.write('.'))
