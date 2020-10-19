@@ -43,27 +43,45 @@ function init_position_not_found() {
 
 // Top live prices
 let topLivePricesSection = $( '.top-live-prices' );
-$('.currency-list-wrapper').bxSlider({
+
+let currencySlider = $('.currency-list-wrapper').bxSlider({
     pager: false,
-    // slideMargin: 30,
+    slideMargin: 50,
     controls: false,
-    speed: 60000,
+    speed: 50500,
     useCSS: true,
     ticker: true,
     tickerHover: true,
-    slideWidth: 247,
+    slideWidth: 195,
     responsive: true,
     minSlides: 1,
     maxSlides: 5,
     wrapperClass: 'currency-list-wrapper'
 });
+if ( window.matchMedia("(max-width: 576px)").matches ) {
+    currencySlider.reloadSlider({
+        pager: false,
+        slideMargin: 2,
+        controls: false,
+        speed: 50500,
+        useCSS: true,
+        ticker: true,
+        tickerHover: true,
+        slideWidth: 190,
+        responsive: true,
+        minSlides: 1,
+        maxSlides: 5,
+        wrapperClass: 'currency-list-wrapper'
+    });
+}
 
 $(window).on( 'scroll', function (e) {
      if ($(this).scrollTop()>70) {
          topLivePricesSection.addClass( 'fixed-to-bottom' );
-         topLivePricesSection.animate( { bottom: '0' }, 'slow' );
+         mainPage.css( 'padding-top', '70px' );
      }else if ( topLivePricesSection.hasClass( 'fixed-to-bottom' ) ){
          topLivePricesSection.removeClass( 'fixed-to-bottom' );
+         mainPage.css( 'padding-top', '0' );
      }
 } );
 

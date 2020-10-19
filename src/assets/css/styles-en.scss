@@ -363,7 +363,7 @@ i {
 
 #main-page {
   transform: translate3d(0, 0, 0);
-  transition: 0.3s;
+  transition: transform 0.3s;
 
   &.menu-translate {
     //transform: translate3d(-250px, 0, 0);
@@ -3304,6 +3304,19 @@ footer {
     }
   }
 
+  /*Top live prices*/
+  .top-live-prices{
+    .currency-list-wrapper{
+      height: 45px;
+      &__item{
+        .currency-name{
+          margin-top: 2px;
+          margin-bottom: 2px;
+        }
+      }
+    }
+  }
+
   /*Last post*/
   .bourse-post-meta
   {
@@ -3803,19 +3816,15 @@ footer {
   }
 
   /*Suggest bourse*/
-  .suggest-bourse {
-    margin-bottom: 10px;
-  }
-
-  /*Suggest bourse*/
   .suggest-bourse{
+    margin-bottom: 10px;
     &__item-wrapper{
       .suggest-bourse-details{
         p{
           //text-align: left;
           //padding-left: 5px;
           text-align: right;
-          padding-right: 5px;
+          padding-right: 15px;
         }
       }
       .suggest-bourse-read-more{
@@ -3824,7 +3833,7 @@ footer {
         //text-align: right;
         text-align: left;
         //padding-right: 5px;
-        padding-left: 5px;
+        padding-left: 15px;
         a{
           font-size: 12px;
         }
