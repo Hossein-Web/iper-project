@@ -61,6 +61,7 @@ $('.currency-list-wrapper').bxSlider({
 $(window).on( 'scroll', function (e) {
      if ($(this).scrollTop()>70) {
          topLivePricesSection.addClass( 'fixed-to-bottom' );
+         topLivePricesSection.animate( { bottom: '0' }, 'slow' );
      }else if ( topLivePricesSection.hasClass( 'fixed-to-bottom' ) ){
          topLivePricesSection.removeClass( 'fixed-to-bottom' );
      }
