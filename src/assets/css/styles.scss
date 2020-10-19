@@ -345,7 +345,7 @@ i {
 
 #main-page {
   transform: translate3d(0, 0, 0);
-  transition: 0.3s;
+  transition: transform 0.3s;
 
   &.menu-translate {
     transform: translate3d(-250px, 0, 0);
@@ -360,7 +360,7 @@ i {
     background-color: white;
     right: 0;
     left: 0;
-    bottom: -70px;
+    bottom: 0;
     z-index: 1000;
   }
   direction: ltr;
@@ -370,7 +370,6 @@ i {
       text-align: left;
       color: $text-color;
       margin-bottom: 17px;
-
       .currency-name {
         font-size: 12px;
         font-weight: 500;
@@ -3162,6 +3161,24 @@ footer {
     }
   }
 
+  /*Top live prices*/
+  .top-live-prices{
+    .currency-list-wrapper{
+      height: 45px;
+      &__item{
+        .currency-details{
+          .currency-value{
+            margin-right: 2px;
+          }
+        }
+        .currency-name{
+          margin-top: 2px;
+          margin-bottom: 2px;
+        }
+      }
+    }
+  }
+
   /*Last post*/
   .bourse-post-meta
   {
@@ -3653,24 +3670,20 @@ footer {
   }
 
   /*Suggest bourse*/
-  .suggest-bourse {
-    margin-bottom: 10px;
-  }
-
-  /*Suggest bourse*/
   .suggest-bourse{
+    margin-bottom: 10px;
     &__item-wrapper{
       .suggest-bourse-details{
         p{
           text-align: left;
-          padding-left: 5px;
+          padding-left: 15px;
         }
       }
       .suggest-bourse-read-more{
         bottom: 12px;
         background-color: initial;
         text-align: right;
-        padding-right: 5px;
+        padding-right: 15px;
         a{
           font-size: 12px;
         }
@@ -3684,12 +3697,23 @@ footer {
 
     .footer-widget-wrapper {
       margin: 5px 0;
+      h6{
+        margin-bottom: 5px;
+        margin-top: 10px;
+      }
+      ul{
+        li{
+          &:not( :last-child ) {
+            margin-bottom: 5px;
+          }
+        }
+      }
     }
   }
 
   /*Footer bottom*/
   .footer-bottom {
-    padding: 15px 0 70px;
+    padding: 15px 0 45px;
     .footer-copy-right{
       flex-wrap: wrap;
       div{
