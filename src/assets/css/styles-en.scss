@@ -415,6 +415,8 @@ i {
               display: inline-block;
               position: relative;
               margin-right: 5px;
+              font-family: persian;
+              font-weight: 300;
             }
           }
 
@@ -423,7 +425,6 @@ i {
 
             &::before {
               content: '\e904';
-              font-family: persian;
               color: $valid-color;
             }
           }
@@ -433,7 +434,6 @@ i {
 
             &::before {
               content: '\e902';
-              font-family: persian;
               color: $invalid-color;
             }
           }
