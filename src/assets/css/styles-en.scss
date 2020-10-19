@@ -406,8 +406,6 @@ i {
             &::before {
               display: inline-block;
               position: relative;
-              width: 10px;
-              height: 10px;
               margin-right: 5px;
             }
           }
@@ -416,9 +414,9 @@ i {
             color: $valid-color;
 
             &::before {
-              content: '';
+              content: '\e904';
+              font-family: persian;
               color: $valid-color;
-              background-color: $valid-color;
             }
           }
 
@@ -426,9 +424,9 @@ i {
             color: $invalid-color;
 
             &::before {
-              content: '';
+              content: '\e902';
+              font-family: persian;
               color: $invalid-color;
-              background-color: $invalid-color;
             }
           }
 
