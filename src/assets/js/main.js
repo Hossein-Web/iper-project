@@ -19,6 +19,7 @@ $(window).on('load', () => {
     AOS.init();
 });
 
+// center 404 not found
 var timer;
 var viewportHeight = $(window).height();
 
@@ -41,6 +42,7 @@ function init_position_not_found() {
 };
 
 // Top live prices
+let topLivePricesSection = $( '.top-live-prices' );
 $('.currency-list-wrapper').bxSlider({
     pager: false,
     // slideMargin: 30,
@@ -55,6 +57,14 @@ $('.currency-list-wrapper').bxSlider({
     maxSlides: 5,
     wrapperClass: 'currency-list-wrapper'
 });
+
+$(window).on( 'scroll', function (e) {
+     if ($(this).scrollTop()>70) {
+         topLivePricesSection.addClass( 'fixed-to-bottom' );
+     }else if ( topLivePricesSection.hasClass( 'fixed-to-bottom' ) ){
+         topLivePricesSection.removeClass( 'fixed-to-bottom' );
+     }
+} );
 
 tabInit();
 

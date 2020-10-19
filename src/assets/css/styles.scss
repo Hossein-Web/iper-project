@@ -355,6 +355,14 @@ i {
 
 /*------------ Top live prices -------------*/
 .top-live-prices {
+  &.fixed-to-bottom{
+    position: fixed;
+    background-color: white;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1000;
+  }
   direction: ltr;
   .currency-list-wrapper {
     height: 70px;
@@ -2568,7 +2576,7 @@ footer {
 }
 
 .footer-bottom {
-  padding: 37px 0;
+  padding: 37px 0 70px;
   background-color: $background-color;
 
   .footer-copy-right {
@@ -3139,9 +3147,6 @@ footer {
 /*------------ < 576px -------------*/
 @media only screen and (max-width: 576px) {
   /*General*/
-  .container{
-    padding: 0 5px;
-  }
   .header {
     padding: 10px 0 !important;
     &__logo{
@@ -3504,7 +3509,7 @@ footer {
         justify-content: center !important;
         right: 0;
         left: 0;
-        padding-top: 10px;
+        padding-top: 7px;
       }
       .swiper-slide{
         margin-bottom: 63px;
@@ -3688,7 +3693,7 @@ footer {
 
   /*Footer bottom*/
   .footer-bottom {
-    padding: 15px 0;
+    padding: 15px 0 70px;
     .footer-copy-right{
       flex-wrap: wrap;
       div{
@@ -3791,6 +3796,11 @@ footer {
 
 /*------------ < 450px -------------*/
 @media only screen and (max-width: 450px){
+  /*General*/
+  .container{
+    padding: 0 5px;
+  }
+
   .post-slider{
    &__slider{
      .post-slider-navigation{
