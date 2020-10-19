@@ -140,6 +140,23 @@ function stylesDev() {
 	// 	.pipe(dest('./build/assets/css'))
 	// 	.pipe(browserSync.stream({ match: '**/*.css' }));
 
+	return src('./src/assets/css/styles.scss')
+		.pipe(sourcemaps.init())
+		.pipe(sass({includePaths: 'node_modules'}).on("error", sass.logError))
+		.pipe(sourcemaps.write('.'))
+		.pipe(dest('./build/assets/css'))
+		.pipe(browserSync.stream({ match: '**/*.css' }));
+}
+
+function stylesENDev() {
+	// return src('./src/assets/css/styles.css')
+	// 	.pipe(plumber({ errorHandler: onError }))
+	// 	.pipe(sourcemaps.init())
+	// 	.pipe(postcss(pluginsDev))
+	// 	.pipe(sourcemaps.write('.'))
+	// 	.pipe(dest('./build/assets/css'))
+	// 	.pipe(browserSync.stream({ match: '**/*.css' }));
+
 	return src('./src/assets/css/styles-en.scss')
 		.pipe(sourcemaps.init())
 		.pipe(sass({includePaths: 'node_modules'}).on("error", sass.logError))
@@ -189,6 +206,7 @@ exports.dev = series(
 	copyImagesDev,
 	copyFontsDev,
 	stylesDev,
+	stylesENDev,
 	headerScriptsDev,
 	footerScriptsDev,
 	staticFilesDev,

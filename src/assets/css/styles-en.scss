@@ -1423,7 +1423,8 @@ i {
       .post-content-image-wrapper {
         display: flex;
         align-items: center;
-        margin-bottom: 12px;
+        padding-bottom: 12px;
+        border-bottom: 2px solid $background-color-2;
         position: relative;
         .post-image{
           overflow: hidden;
@@ -1439,15 +1440,15 @@ i {
             }
           }
         }
-        &::after {
-          content: '';
-          position: absolute;
-          display: block;
-          height: 2px;
-          width: 100%;
-          background-color: $background-color-2;
-          bottom: -20px;
-        }
+        //&::after {
+        //  content: '';
+        //  position: absolute;
+        //  display: block;
+        //  height: 2px;
+        //  width: 100%;
+        //  background-color: $background-color-2;
+        //  bottom: -20px;
+        //}
 
         .post-image {
           flex: 0 0 auto;
@@ -3476,9 +3477,9 @@ footer {
         padding: 13px 5px 0;
         .post-content-image-wrapper {
           flex-direction: column;
-          &::after{
-            bottom: -12px;
-          }
+          //&::after{
+          //  bottom: -12px;
+          //}
           .post-image{
             margin-bottom: 5px;
           }
