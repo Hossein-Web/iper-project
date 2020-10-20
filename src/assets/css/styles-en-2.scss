@@ -180,7 +180,9 @@ body {
 
 /*------------ Header -------------*/
 .header {
-
+  &__logo {
+    text-align: right;
+  }
   &__menu-user-links-wrapper {
     .main-menu {
       padding-right: unset;
@@ -959,9 +961,21 @@ footer {
 @media screen and (max-width: 992px) {
   /*header*/
   .header {
+    &__wrapper {
+      .col-xl-19{
+        order: 25;
+      }
+      .col-xl-5{
+        order: -1;
+      }
+    }
+    &__menu-user-links-wrapper {
+      justify-content: flex-end !important;
+    }
     &__logo {
       margin-left: unset;
       margin-right: 0;
+      text-align: left;
     }
   }
 }

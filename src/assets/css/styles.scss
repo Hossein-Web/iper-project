@@ -347,6 +347,7 @@ i {
   transform: translate3d(0, 0, 0);
   transition: transform 0.3s;
   padding-top: 70px;
+
   &.menu-translate {
     transform: translate3d(-250px, 0, 0);
     transition: 0.3s;
@@ -360,10 +361,11 @@ i {
   right: 0;
   left: 0;
   top: 0;
+
   &.fixed-to-bottom {
     bottom: 0;
     top: initial;
-    z-index: 1000;
+    z-index: 100;
   }
 
   direction: ltr;
@@ -371,6 +373,7 @@ i {
   .currency-list-wrapper {
     height: 70px;
     cursor: pointer;
+
     &__item {
       text-align: left;
       color: $text-color;
@@ -431,6 +434,17 @@ i {
 }
 
 /*------------ Header -------------*/
+.where-button {
+  a {
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 25px;
+    background-color: $accent-color;
+    padding: 18px 30px;
+    color: white;
+    display: inline-block;
+  }
+}
 .header {
   background-color: white;
   padding-top: 40px;
@@ -438,12 +452,28 @@ i {
   box-shadow: 0 -50px 45px -30px rgba(0, 0, 0, 0.11), 0 50px 45px -30px rgba(0, 0, 0, 0.11);
   z-index: 2;
   position: relative;
-
+  transition: 0.3s;
+  &.sticky {
+    position: sticky;
+    top: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    z-index: 100000;
+  }
+  &__logo{
+    text-align: left;
+  }
   &__wrapper {
     position: relative;
 
     div[class^="col-"] {
       position: static;
+    }
+    .col-xl-19{
+      order: -1;
+    }
+    .col-xl-5{
+      order: 25;
     }
   }
 
@@ -775,18 +805,6 @@ i {
         }
       }
     }
-
-    .where-button {
-      a {
-        font-size: 14px;
-        font-weight: 500;
-        border-radius: 25px;
-        background-color: $accent-color;
-        padding: 18px 30px;
-        color: white;
-        display: inline-block;
-      }
-    }
   }
 
   /*----- mobile menu -----*/
@@ -799,7 +817,7 @@ i {
     height: 100vh;
     background-color: white;
     transition: 0.3s;
-    z-index: 300;
+    z-index: 10000;
     padding-right: 10px;
     padding-left: 10px;
     overflow: scroll;
@@ -964,7 +982,18 @@ i {
       border-top: 1px solid $background-color-2;
       padding-top: 10px;
       transition: 0.3s;
-
+      .where-button {
+        margin-bottom: 12px;
+          a {
+            font-size: 13px;
+            padding: 10px 15px;
+            //font-weight: 500;
+            //border-radius: 25px;
+            //background-color: $accent-color;
+            //color: white;
+            //display: inline-block;
+          }
+      }
       .mobile-menu {
         li {
           padding-right: 5px;
@@ -983,7 +1012,8 @@ i {
 
 #mobile-overlay {
   display: none;
-  z-index: 250;
+  z-index: 1000;
+  position: relative;
 
   &::before {
     content: '';
@@ -2583,7 +2613,7 @@ footer {
   background-color: $background-color;
   //padding-bottom: 39px;
 
-  >.container {
+  > .container {
     border-bottom: 2px solid $light-gray;
   }
 
@@ -3041,11 +3071,6 @@ footer {
 
   /*header*/
   .header {
-    &__logo {
-      margin-left: 0;
-      text-align: center;
-    }
-
     .main-menu {
       padding-right: 0;
     }
@@ -3081,11 +3106,14 @@ footer {
 @media screen and (max-width: 992px) {
   /*header*/
   .header {
-    &__logo {
-      margin-left: 0;
-      text-align: center;
+    &__wrapper {
+      .col-xl-19{
+        order: -1;
+      }
+      .col-xl-5{
+        order: 25;
+      }
     }
-
     .main-menu {
       display: none;
     }
@@ -3095,9 +3123,7 @@ footer {
     }
 
     .user-links {
-      ul {
         display: none;
-      }
     }
   }
 
@@ -3212,23 +3238,8 @@ footer {
   /*General*/
   .header {
     padding: 10px 0 !important;
-
-    &__logo {
-      margin-bottom: 5px;
-    }
-
-    &__menu-user-links-wrapper {
-      .user-links {
-        .where-button {
-          a {
-            font-size: 13px;
-            padding: 10px 15px;
-          }
-        }
-      }
-    }
   }
-  #main-page{
+  #main-page {
     padding-top: 50px;
   }
 
@@ -3236,6 +3247,7 @@ footer {
   .top-live-prices {
     .currency-list-wrapper {
       height: 45px;
+
       &__item {
         .currency-details {
           .currency-value {

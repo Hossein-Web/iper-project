@@ -87,6 +87,17 @@ $(window).on( 'scroll', function (e) {
 
 tabInit();
 
+//sticky menu
+$(window).on( 'scroll', function () {
+    let header = $('.header');
+    let sticky = header.offset().top;
+        if (window.pageYOffset >= sticky) {
+           header.addClass( 'sticky' );
+        } else {
+            header.removeClass( 'sticky' );
+        }
+} );
+
 //mobile menu
 let body = $('body');
 let mobileWrapper = $('.header__mobile-menu-wrapper');
