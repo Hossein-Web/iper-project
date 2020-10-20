@@ -751,39 +751,38 @@ footer {
       }
     }
   }
-}
-
-.footer-bottom {
-  .footer-copy-right {
-    .copy-right-text-wrapper {
-      margin-right: unset;
-      margin-left: 23px;
+  .footer-bottom {
+    .footer-copy-right {
+      .copy-right-text-wrapper {
+        margin-right: unset;
+        margin-left: 23px;
+      }
     }
-  }
 
-  .footer-social-media {
-    ul {
-      li {
-        &:not( :first-child ) {
-          margin-right: unset;
-          margin-left: 14px;
-        }
-        .footer-social-icon {
-          margin-right: unset;
-          margin-left: 7px;
-        }
+    .footer-social-media {
+      ul {
+        li {
+          &:not( :first-child ) {
+            margin-right: unset;
+            margin-left: 14px;
+          }
+          .footer-social-icon {
+            margin-right: unset;
+            margin-left: 7px;
+          }
 
-        .social-text-wrapper {
-          text-align: right;
+          .social-text-wrapper {
+            text-align: right;
 
-          span {
-            padding-right: unset;
-            padding-left: 14px;
+            span {
+              padding-right: unset;
+              padding-left: 14px;
 
-            i {
-              right: unset;
-              left: 0;
-              transform: rotate( -180deg );
+              i {
+                right: unset;
+                left: 0;
+                transform: rotate( -180deg );
+              }
             }
           }
         }
@@ -990,6 +989,7 @@ footer {
 
 /*------------ < 576px -------------*/
 @media only screen and (max-width: 576px) {
+
   /*Last post*/
   .bourse-post-meta
   {
