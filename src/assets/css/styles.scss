@@ -2672,7 +2672,7 @@ footer {
     .footer-social-media {
       display: flex;
       justify-content: flex-end;
-
+      padding-top: 10px;
       ul {
         display: flex;
         flex-wrap: wrap;
@@ -2716,6 +2716,7 @@ footer {
             display: inline-block;
             color: #8ba1b6;
             margin-right: 7px;
+            margin-top: 1px;
             transition: 0.3s;
             font-size: 19px;
           }
@@ -3837,40 +3838,38 @@ footer {
         }
       }
     }
-  }
+    .footer-bottom {
+      padding: 15px 0 50px !important;
 
-  /*Footer bottom*/
-  .footer-bottom {
-    padding: 15px 0 50px !important;
+      .footer-copy-right {
+        flex-wrap: wrap;
 
-    .footer-copy-right {
-      flex-wrap: wrap;
+        div {
+          flex: 1 0 auto;
 
-      div {
-        flex: 1 0 auto;
+          &:first-child {
+            text-align: center;
 
-        &:first-child {
-          text-align: center;
-
-          a {
-            display: inline-block;
+            a {
+              display: inline-block;
+            }
           }
+        }
+
+        .copy-right-text-wrapper {
+          flex: 1 1 auto;
+          text-align: justify;
+          margin: 0;
         }
       }
 
-      .copy-right-text-wrapper {
-        flex: 1 1 auto;
-        text-align: justify;
-        margin: 0;
-      }
-    }
-
-    .footer-social-media {
-      margin-top: 15px;
-
-      li {
-        margin-bottom: 5px !important;
-        max-height: 25px;
+      .footer-social-media {
+        margin-top: 15px;
+        padding-top: 0;
+        li {
+          margin-bottom: 5px !important;
+          max-height: 25px;
+        }
       }
     }
   }
@@ -3966,7 +3965,7 @@ footer {
 @media only screen and (max-width: 450px) {
   /*General*/
   .container {
-    padding: 0 5px;
+    padding: 0 15px;
   }
 
   .post-slider {
