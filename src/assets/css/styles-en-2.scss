@@ -753,39 +753,38 @@ footer {
       }
     }
   }
-}
-
-.footer-bottom {
-  .footer-copy-right {
-    .copy-right-text-wrapper {
-      margin-right: unset;
-      margin-left: 23px;
+  .footer-bottom {
+    .footer-copy-right {
+      .copy-right-text-wrapper {
+        margin-right: unset;
+        margin-left: 23px;
+      }
     }
-  }
 
-  .footer-social-media {
-    ul {
-      li {
-        &:not( :first-child ) {
-          margin-right: unset;
-          margin-left: 14px;
-        }
-        .footer-social-icon {
-          margin-right: unset;
-          margin-left: 7px;
-        }
+    .footer-social-media {
+      ul {
+        li {
+          &:not( :first-child ) {
+            margin-right: unset;
+            margin-left: 14px;
+          }
+          .footer-social-icon {
+            margin-right: unset;
+            margin-left: 7px;
+          }
 
-        .social-text-wrapper {
-          text-align: right;
+          .social-text-wrapper {
+            text-align: right;
 
-          span {
-            padding-right: unset;
-            padding-left: 14px;
+            span {
+              padding-right: unset;
+              padding-left: 14px;
 
-            i {
-              right: unset;
-              left: 0;
-              transform: rotate( -180deg );
+              i {
+                right: unset;
+                left: 0;
+                transform: rotate( -180deg );
+              }
             }
           }
         }
@@ -1004,6 +1003,7 @@ footer {
 
 /*------------ < 576px -------------*/
 @media only screen and (max-width: 576px) {
+
   /*Last post*/
   .bourse-post-meta
   {
@@ -1101,18 +1101,19 @@ footer {
 
   /*Suggest bourse*/
   .suggest-bourse{
+
     &__item-wrapper{
       .suggest-bourse-details{
         p{
           padding-left: unset;
           text-align: right;
-          padding-right: 5px;
+          padding-right: 15px;
         }
       }
       .suggest-bourse-read-more{
         text-align: left;
         padding-right: unset;
-        padding-left: 5px;
+        padding-left: 15px;
       }
     }
   }
