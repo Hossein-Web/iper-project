@@ -1087,18 +1087,19 @@ footer {
 
   /*Suggest bourse*/
   .suggest-bourse{
+
     &__item-wrapper{
       .suggest-bourse-details{
         p{
           padding-left: unset;
           text-align: right;
-          padding-right: 5px;
+          padding-right: 15px;
         }
       }
       .suggest-bourse-read-more{
         text-align: left;
         padding-right: unset;
-        padding-left: 5px;
+        padding-left: 15px;
       }
     }
   }
