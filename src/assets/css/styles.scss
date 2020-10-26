@@ -343,11 +343,12 @@ i {
 
 }
 
+//header{
+//  margin-top: 70px;
+//}
 #main-page {
   transform: translate3d(0, 0, 0);
   transition: transform 0.3s;
-  padding-top: 70px;
-
   &.menu-translate {
     transform: translate3d(-250px, 0, 0);
     transition: 0.3s;
@@ -356,15 +357,16 @@ i {
 
 /*------------ Top live prices -------------*/
 .top-live-prices {
-  position: fixed;
-  background-color: white;
-  right: 0;
-  left: 0;
-  top: 0;
-
+  // top: 0;
+  bottom: -70px;
+  transition: 1s;
   &.fixed-to-bottom {
+    position: fixed;
+    background-color: white;
+    right: 0;
+    left: 0;
     bottom: 0;
-    top: initial;
+    // top: initial;
     z-index: 100;
   }
 
@@ -453,12 +455,20 @@ i {
   z-index: 2;
   position: relative;
   transition: 0.3s;
+  //top: -10px;
   &.sticky {
-    position: sticky;
+    //position: sticky;
+    position: fixed;
+    right: 0;
+    left: 0;
     top: 0;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    //padding-top: 10px;
+    //padding-bottom: 10px;
     z-index: 100000;
+    //margin-top: 0;
+    //+ #main-page{
+    //  padding-top: 137px;
+    //}
   }
   &__logo{
     text-align: left;
@@ -3239,11 +3249,7 @@ footer {
   /*General*/
   .header {
     padding: 10px 0 !important;
-  }
-
-
-  #main-page{
-    padding-top: 50px;
+    //margin-top: 50px;
   }
 
   /*Top live prices*/

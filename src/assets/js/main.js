@@ -43,6 +43,9 @@ function init_position_not_found() {
 
 // Top live prices
 let topLivePricesSection = $( '.top-live-prices' );
+let menu_wrapper = $( '.menu-wrapper' );
+let header_element = $( 'header' );
+
 
 let currencySlider = $('.currency-list-wrapper').bxSlider({
     pager: false,
@@ -76,11 +79,19 @@ if ( window.matchMedia("(max-width: 576px)").matches ) {
 }
 
 $(window).on( 'scroll', function (e) {
-     if ($(this).scrollTop()>100) {
+    // let menu_wrapper_padding = topLivePricesSection.outerHeight() + header_element.outerHeight();
+    // console.log(menu_wrapper_padding);
+    // console.log('top-live-prices '+ topLivePricesSection.outerHeight() );
+    // console.log('header '+ header_element.outerHeight() );
+    if ( $(this).scrollTop() > topLivePricesSection.outerHeight() ) {
          topLivePricesSection.addClass( 'fixed-to-bottom' );
-         // mainPage.css( 'padding-top', '70px' );
+         header_element.addClass( 'sticky' );
+        let menu_wrapper_padding = topLivePricesSection.outerHeight() + header_element.outerHeight();
+        $('#main-page').css( 'padding-top', menu_wrapper_padding );
      }else if ( topLivePricesSection.hasClass( 'fixed-to-bottom' ) ){
          topLivePricesSection.removeClass( 'fixed-to-bottom' );
+         header_element.removeClass( 'sticky' );
+        $('#main-page').css( 'padding-top', '0' );
          // mainPage.css( 'padding-top', '0' );
      }
 } );
@@ -88,15 +99,31 @@ $(window).on( 'scroll', function (e) {
 tabInit();
 
 //sticky menu
-$(window).on( 'scroll', function () {
-    let header = $('.header');
-    let sticky = header.offset().top;
-        if (window.pageYOffset >= sticky) {
-           header.addClass( 'sticky' );
-        } else {
-            header.removeClass( 'sticky' );
-        }
-} );
+// $(window).on( 'scroll', function () {
+//     let header = $('.header');
+//     let sticky = header.offset().top;
+//         if (window.pageYOffset >= 137) {
+//            header.addClass( 'sticky' );
+//            $('.header-bottom').css('padding-top', '100px');
+//         } else {
+//             header.removeClass( 'sticky' );
+//             $('.header-bottom').css('padding-top', '21px');
+//         }
+//         console.log( $('.top-live-prices').height() );
+// } );
+
+// $(window).on( 'scroll', function (e) {
+    // console.log( $(this).scrollTop() );
+    // if ($(this).scrollTop()>70) {
+        // topLivePricesSection.addClass( 'fixed-to-bottom' );
+        // mainPage.css( 'padding-top', '70px' );
+        // header.addClass( 'sticky' );
+    // }else {
+        // topLivePricesSection.removeClass( 'fixed-to-bottom' );
+        // mainPage.css( 'padding-top', '0' );
+        // header.removeClass( 'sticky' );
+    // }
+// } );
 
 //mobile menu
 let body = $('body');
