@@ -184,15 +184,20 @@ Table of content
       font-size: 37px;
       font-weight: 500;
       background-color: white;
+      padding-left: 10px;
+      padding-right: 10px;
+      width: 37px;
+      height: 15px;
+      line-height: 0;
     }
 
     &::before {
-      top: -30px;
+      top: -10px;
       right: 28px;
     }
 
     &::after {
-      bottom: -10px;
+      bottom: -5px;
       left: 23px;
     }
   }
