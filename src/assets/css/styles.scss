@@ -3504,7 +3504,7 @@ footer {
       font-style: normal;
       background-color: white;
       position: absolute;
-      bottom: 9px;
+      bottom: 14px;
       left: 31px;
     }
 
@@ -3650,7 +3650,7 @@ footer {
           transition: 0.3s;
           width: 42px;
           height: 42px;
-          border-radius: 42px;
+          border-radius: 17px;
           padding-top: 8px;
 
           &.next-page, &.prev-page {
@@ -3669,7 +3669,7 @@ footer {
       a {
         color: #9c9c9f;
         transition: 0.3s;
-
+        text-align: justify;
         &:hover {
           color: $accent-color;
         }
@@ -3677,6 +3677,13 @@ footer {
     }
 
   }
+}
+
+/*Page*/
+.page-title{
+  color: $text-color;
+  margin-bottom: 30px;
+  font-size: 20px;
 }
 
 /*------------ Media queries -------------*/
