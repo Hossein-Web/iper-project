@@ -312,3 +312,8 @@ $('.footer-social-media li').on('mouseover', function (e) {
     $(this).addClass('active');
     $(this).siblings().removeClass('active')
 });
+
+// Side categories
+$( '.side-categories .has-subcategory span' ).on( 'click', function (e) {
+    $('.side-categories .has-subcategory').toggleClass( 'active' );
+});
