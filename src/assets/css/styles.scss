@@ -3157,7 +3157,7 @@ footer {
     font-style: normal;
     letter-spacing: normal;
     line-height: 40px;
-    margin-bottom: 5px;
+    margin-bottom: 20px;
     text-align: justify;
   }
   h1{
@@ -3178,8 +3178,7 @@ footer {
     color: #38424c;
     font-size: 16px;
     font-weight: 700;
-    letter-spacing: normal;
-    line-height: 60px;
+    margin-bottom: 10px;
   }
   blockquote{
     opacity: 0.8;
@@ -3213,6 +3212,7 @@ footer {
   }
   a{
     border-bottom: 2px solid #38424c;
+    transition: 0.3s; 
     &:hover{
       color: $accent-color;
       border-bottom:2px solid $accent-color ;
@@ -3224,12 +3224,14 @@ footer {
     font-style: normal;
     letter-spacing: normal;
     font-size: 20px;
-    //margin-bottom: 28px;
+    margin-bottom: 17px;
     margin-top: 37px;
     li{
       padding-right: 25px;
       position: relative;
-      margin-bottom: 35px;
+      &:not( :last-child ){
+        margin-bottom: 35px;
+      }
       &::before{
         content: '.';
         display: block;
@@ -3281,7 +3283,7 @@ footer {
     border: 1px solid #e9edf1;
     border-radius: 20px;
     position: relative;
-    padding: 30px 30px 3px 30px;
+    padding: 30px 30px 3px 83px;
     margin-bottom: 34px;
     margin-top: 36px;
     &::before{
@@ -3375,7 +3377,7 @@ footer {
           .comment-info{
             display: flex;
             justify-content: space-between;
-            margin-bottom: 34px;
+            margin-bottom: 27px;
             .comment-author, .comment-date{
               font-style: normal;
             }
@@ -3404,12 +3406,18 @@ footer {
             font-weight: 700;
             font-style: normal;
             padding-left: 14px;
-            padding-right: 44px;
+            padding-right: 9px;
             background-color: white;
             display: inline-block;
             position: absolute;
             bottom: -9px;
             left: 55px;
+            i{
+              margin-left: 15px;
+              position: relative;
+              bottom: -3px;
+              color: $accent-color;
+            }
           }
         }
         &__children{
