@@ -28,6 +28,7 @@ Table of content
 -Log-sign
 -404
 -single
+-archive
 -Media queries
 */
 
@@ -3443,6 +3444,55 @@ footer {
     margin-bottom: 24px;
   }
 }
+
+/*------------ Archive -------------*/
+.bourse-news{
+  &__bourse-pagination{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px 26px 25px 26px;
+    ul{
+      li{
+        &:not( :last-child ){
+          margin-left: 15px;
+        }
+        &.active{
+          a{
+            color: $accent-color;
+            border: 1px solid #f3f4f8;
+          }
+        }
+        a{
+          color: #9c9c9f;
+          text-align: center;
+          display: block;
+          transition: 0.3s ;
+          width: 42px;
+          height: 42px;
+          border-radius: 42px;
+          padding-top: 8px;
+          &.next-page ,&.prev-page{
+            color: #c5c5c5;
+            font-size: 9px;
+          }
+          &:hover{
+            color: $accent-color;
+          }
+        }
+      }
+    }
+    .other-pages{
+      a{
+        color: #9c9c9f;
+        transition: 0.3s;
+        &:hover{
+          color: $accent-color;
+        }
+      }
+    }
+  }
+}
 /*------------ Media queries -------------*/
 
 /*------------ < 1200px -------------*/
@@ -3617,6 +3667,14 @@ footer {
             }
           }
         }
+      }
+    }
+  }
+  .bourse-news{
+    &__bourse-pagination{
+      flex-direction: column;
+      ul{
+        margin-bottom: 10px;
       }
     }
   }
