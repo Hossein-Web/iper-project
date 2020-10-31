@@ -166,16 +166,20 @@ Table of content
   }
 
   blockquote {
-    opacity: 0.8;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 40px;
-    padding: 27px 43px;
-    border: 1px solid #e9edf1;
-    border-radius: 20px;
-    position: relative;
-    margin-bottom: 35px;
-
+    p{
+      code{
+        opacity: 0.8;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 40px;
+        padding: 27px 43px;
+        border: 1px solid #e9edf1;
+        border-radius: 20px;
+        position: relative;
+        margin-bottom: 35px;
+      }
+    }
+    
     &::before, &::after {
       content: ',,';
       display: block;
@@ -265,22 +269,38 @@ Table of content
     }
   }
 
-  figure {
+  figure{
     margin-bottom: 15px;
 
     img {
       margin-bottom: 15px;
       border-radius: 20px;
     }
+    figcaption {
+      color: #717c89;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: normal;
+      line-height: 32px;
+    }
   }
 
-  figcaption {
-    color: #717c89;
-    font-size: 14px;
-    font-weight: 500;
-    letter-spacing: normal;
-    line-height: 32px;
+  figure.wp-block-image {
+    margin-bottom: 15px;
+
+    img {
+      margin-bottom: 15px;
+      border-radius: 20px;
+    }
+    figcaption {
+      color: #717c89;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: normal;
+      line-height: 32px;
+    }
   }
+
 }
 
 .log-in, .sign-in, .comments {
