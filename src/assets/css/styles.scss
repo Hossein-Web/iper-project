@@ -2243,6 +2243,36 @@ i {
   border-radius: 10px;
   border: 1px solid $light-gray;
   margin-bottom: 20px;
+  .swiper-container{
+    max-height: 348px;
+    overflow: visible;
+    .swiper-wrapper{
+      max-height: 348px;
+      .swiper-slide-prev{
+        position: relative;
+        opacity: 1;
+        &.slide-change{
+          &::before{
+            top: 0;
+            //opacity: 0.5;
+          }
+        }
+          &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: -6px;
+            left: 11px;
+            right: 11px;
+            z-index: 1;
+            height: 20px;
+            border-radius: 10px;
+            background-color: $accent-color;
+            transition: 0.2s;
+          }
+      }
+    }
+  }
 
   &__title, &__content {
     a {
@@ -2294,7 +2324,7 @@ i {
   &__content {
     display: flex;
     flex-direction: column;
-
+    background-color: white;
     .poster-wrapper {
       display: inline-block;
       margin-left: auto;
@@ -2302,19 +2332,6 @@ i {
       margin-bottom: 20px;
       position: relative;
       text-align: center;
-
-      &::before {
-        content: '';
-        display: block;
-        position: absolute;
-        top: -6px;
-        left: 11px;
-        right: 11px;
-        z-index: 1;
-        height: 20px;
-        border-radius: 10px;
-        background-color: $accent-color;
-      }
 
       a {
         position: absolute;
