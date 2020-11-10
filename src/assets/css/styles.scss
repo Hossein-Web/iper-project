@@ -882,10 +882,8 @@ i {
           }
 
           .mega-menu-content {
-            .mega-menu-content-column {
-              &:not( :last-child ) {
-                padding-left: 18px;
-              }
+              column-count: 3;
+              column-gap: 18px;
 
               li {
                 &:hover {
@@ -915,7 +913,7 @@ i {
                   right: -10px;
                 }
               }
-            }
+            //}
           }
         }
       }
