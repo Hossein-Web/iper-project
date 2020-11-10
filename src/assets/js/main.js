@@ -165,6 +165,15 @@ $('.mobile-close-button').on('click', function (e) {
     mobileClose();
 });
 
+$( '.mobile-menu-body .has_submenu > a' ).on( 'click', function (e) {
+    e.preventDefault();
+} );
+
+$('.mobile-menu-body .has_submenu').on( 'click', function (e) {
+    e.stopPropagation();
+    $( this ).toggleClass( 'active' );
+} );
+
 $('.search>span').on('click', function () {
     $('.search__form').toggleClass('search-open');
 });
