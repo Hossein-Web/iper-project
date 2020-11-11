@@ -345,3 +345,20 @@ side_video.on('transitionStart', function () {
 side_video.on('transitionEnd', function () {
     $( '.side-video-slider .swiper-slide-prev' ).removeClass( 'slide-change' );
 });
+
+var live_prices = new Swiper('.live-prices__cards .swiper-container', {
+    speed: 400,
+    spaceBetween: 30,
+    slidesPerView: 1.8,
+    breakpoints: {
+        577: {
+            slidesPerView: 1.8,
+        },
+        992: {
+            slidesPerView: 2.7
+        },
+        1200: {
+            slidesPerView: 3
+        }
+    }
+});
