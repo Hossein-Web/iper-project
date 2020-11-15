@@ -257,12 +257,6 @@ body {
           }
 
           .mega-menu-content {
-            .mega-menu-content-column {
-              &:not( :last-child ) {
-                padding-left: unset;
-                padding-right: 18px;
-              }
-
               a {
                 margin-right: unset;
                 margin-left: 10px;
@@ -271,7 +265,6 @@ body {
                   left: -10px;
                 }
               }
-            }
           }
         }
       }
@@ -383,6 +376,28 @@ body {
           &:hover {
             padding-right: unset;
             padding-left: 10px;
+          }
+          &.has_submenu{
+            padding-left: 15px;
+            padding-right: unset;
+            &::before{
+              left: 0;
+              right: unset;
+            }
+
+            &.active{
+              ul{
+                li{
+                  padding-left: 10px;
+                  padding-right: unset;
+                  &::before {
+                    left: 0;
+                    right: unset;
+                  }
+
+                }
+              }
+            }
           }
         }
       }
@@ -921,6 +936,129 @@ footer {
     }
   }
 }
+
+
+/*------------ single -------------*/
+/* Post like */
+.post-like {
+  padding: 30px 83px 3px 30px;
+  &::before {
+    right: 30px;
+    left: unset;
+  }
+
+  &__title {
+    left: 87px;
+    right: unset;
+  }
+
+  &__image {
+    margin-right: 24px;
+    margin-left: unset;
+
+  }
+}
+
+/* Comments */
+.comments {
+  &__list {
+    ul {
+      .comment {
+        &__content {
+          .comment-reply {
+            padding-right: 14px;
+            padding-left: 9px;
+            right: 55px;
+            left: unset;
+
+            i {
+              margin-right: 15px;
+              margin-left: unset;
+            }
+          }
+        }
+
+        ul {
+          margin-left: 30px;
+          margin-right: unset;
+
+        }
+      }
+    }
+
+  }
+
+  &__form {
+
+    .comments-submit {
+      right: 31px;
+      left: unset;
+    }
+
+  }
+}
+
+/*------------ Archive -------------*/
+.side-categories {
+
+  & > ul {
+    & > li {
+      &.has-subcategory {
+        span {
+          padding-left: 12px;
+          padding-right: unset;
+
+          &:before {
+            left: 0;
+            right: unset;
+          }
+        }
+
+        ul {
+          margin-left: 20px;
+          margin-right: unset;
+          text-align: left;
+
+          li {
+            a {
+              padding-left: 15px;
+              padding-right: unset;
+
+              &::before {
+                left: 0;
+                right: unset;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.bourse-news {
+  &__bourse-pagination {
+
+    ul {
+      li {
+        &:not( :last-child ) {
+          margin-right: 15px;
+          margin-left: unset;
+        }
+
+        a {
+
+          &.next-page, &.prev-page {
+            i{
+              transform: rotate( -180deg );
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 
 /*------------ Media queries -------------*/
 
